@@ -12,6 +12,9 @@ sessions recover cleanly across reconnects and after an in-product update.
 **Client speed limits.** Fixed a case where client speed limits were not
 reapplied after a reboot.
 
+**Remote Management.** No longer offered on devices with limited memory where it
+isn't supported, avoiding a feature that couldn't run reliably there.
+
 **Diagnostics.** The firmware build identity is now reported for easier support.
 
 ## beta 0.4.62 — 2026-09-11
