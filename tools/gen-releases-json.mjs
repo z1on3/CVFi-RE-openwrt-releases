@@ -96,13 +96,16 @@ function parseSums(text) {
   return map;
 }
 
-const releases = JSON.parse(gh(['release', 'list', '--repo', repo, '--json', 'tagName,name,publishedAt,isPrerelease']));
+const releases = JSON.parse(gh(['release', 'list', '--repo', repo, '--json', 'tagName,name,publishedAt,isPrerelease,isDraft']));
 // gh release list returns newest-first already; keep that order.
 const out = { latest: '', releases: [] };
 
 for (const rel of releases) {
   const tag = rel.tagName;
   if (tag === 'patches') { continue; } // the patch-asset release is not an OTA version
+  // Draft releases are still staged: their assets are not publicly downloadable,
+  // so they must never appear in the OTA list (routers could not fetch them).
+  if (rel.isDraft) { continue; }
   const view = JSON.parse(gh(['release', 'view', tag, '--repo', repo, '--json', 'assets']));
   const names = (view.assets || []).map((a) => a.name);
   if (!names.includes('SHA256SUMS.txt')) { continue; }
