@@ -2,6 +2,18 @@
 
 All notable changes to the JuanFi‑RE flashable releases are documented here.
 
+## beta 0.4.63 — 2026-09-16
+
+**PPPoE.** A round of improvements to the built-in PPPoE server: its settings now
+live in a dedicated dialog for a cleaner setup, plan speed limits are applied more
+accurately, internet forwarding for PPPoE clients is more reliable, and client
+sessions recover cleanly across reconnects and after an in-product update.
+
+**Client speed limits.** Fixed a case where client speed limits were not
+reapplied after a reboot.
+
+**Diagnostics.** The firmware build identity is now reported for easier support.
+
 ## beta 0.4.62 — 2026-09-11
 
 **Node management.** Improved the pin-settings editor and Save workflow, with
