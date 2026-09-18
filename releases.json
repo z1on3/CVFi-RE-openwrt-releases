@@ -268,6 +268,22 @@
           "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Intel_NUC_Mini_PC.jpg",
           "note": ""
         }
+      ],
+      "node_assets": [
+        {
+          "type": "firmware",
+          "name": "ESP8266 Node Firmware",
+          "version": "v0.4",
+          "file": "JuanFi-RE-ESP8266-node-firmware-v0.4.bin",
+          "sha256": "a7c997b49cd136901459927aad5e409220ca07ad7eba75e57ff155ce8c82f6aa"
+        },
+        {
+          "type": "littlefs",
+          "name": "ESP8266 Node LittleFS",
+          "version": "v0.4",
+          "file": "JuanFi-RE-ESP8266-node-littlefs-v0.4.bin",
+          "sha256": "f764bc9f01b5f34e843de973062c22abca21352c070bfef2b31a9e3b7ea009fe"
+        }
       ]
     },
     {
@@ -537,7 +553,8 @@
           "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Intel_NUC_Mini_PC.jpg",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.4.62-beta",
@@ -806,7 +823,8 @@
           "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Intel_NUC_Mini_PC.jpg",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.4.61-beta",
@@ -1075,7 +1093,8 @@
           "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Intel_NUC_Mini_PC.jpg",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.4.60-beta",
@@ -1263,7 +1282,8 @@
           "image": "",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.4.59-beta",
@@ -1451,7 +1471,8 @@
           "image": "",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.4.58-beta",
@@ -1639,7 +1660,8 @@
           "image": "",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.4.57-beta",
@@ -1827,7 +1849,8 @@
           "image": "",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.4.56-beta",
@@ -2015,7 +2038,8 @@
           "image": "",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.4.55-beta",
@@ -2203,7 +2227,8 @@
           "image": "",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.4.5-beta",
@@ -2391,7 +2416,8 @@
           "image": "",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.4.4-beta",
@@ -2579,7 +2605,8 @@
           "image": "",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.4.2-beta",
@@ -2767,7 +2794,8 @@
           "image": "",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.4.1-beta",
@@ -2955,7 +2983,8 @@
           "image": "",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.4.0-beta",
@@ -3143,7 +3172,8 @@
           "image": "",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.3.6-beta",
@@ -3232,7 +3262,8 @@
           "image": "",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.3.5-beta",
@@ -3321,7 +3352,8 @@
           "image": "",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.3-beta",
@@ -3401,7 +3433,8 @@
           "image": "https://eo-sgp-cos.ruijie.com/background/other/2023-10-27/7b9d778c2293490a993760bc68f52396.png",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.2-beta",
@@ -3436,7 +3469,8 @@
           "image": "https://eo-sgp-cos.ruijie.com/background/other/2023-10-27/7b9d778c2293490a993760bc68f52396.png",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     },
     {
       "version": "0.1-beta",
@@ -3462,7 +3496,8 @@
           "image": "https://eo-sgp-cos.ruijie.com/background/other/2023-10-27/7b9d778c2293490a993760bc68f52396.png",
           "note": ""
         }
-      ]
+      ],
+      "node_assets": []
     }
   ],
   "devices": {

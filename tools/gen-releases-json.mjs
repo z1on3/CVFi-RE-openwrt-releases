@@ -4,10 +4,9 @@
 //
 //   node tools/gen-releases-json.mjs [owner/repo] > releases.json
 //
-// For every release it reads the asset list + the release's SHA256SUMS.txt,
-// keeps only the router firmware images (JuanFi-RE-<board>-<openwrt>-beta-<rel>.bin
-// — ESP8266/node assets are skipped), derives {board, openwrt} from each filename,
-// and emits the structure documented in docs/SYSTEM-UPDATE.md. Newest release first.
+// For every release it reads the asset list and checksum manifests, emits router
+// and appliance images under `assets`, and emits the two ESP8266 images under
+// `node_assets`. Newest release first.
 //
 // The router matches an asset by board == cvfi_board_slug AND openwrt ==
 // cvfi_openwrt_version, so the derivation here MUST match those slugs exactly.
@@ -31,6 +30,10 @@ const IMG_RE = /^JuanFi-RE-(.+)-(\d+\.\d+\.\d+)-beta-(.+)\.bin$/;
 // their board slugs are deliberately absent from the on-device cvfi_board_slug map, so
 // the router OTA picker never matches (and never tries to sysupgrade a whole-disk image).
 const APP_RE = /^JuanFi-RE-(.+)-(\d+\.\d+\.\d+)-beta-(.+)\.img\.gz$/;
+
+// ESP8266 node images are versioned independently from the router release. Every
+// release carries both the application firmware and its required LittleFS image.
+const NODE_RE = /^JuanFi-RE-ESP8266-node-(firmware|littlefs)-(v[^/]+)\.bin$/;
 
 // Per-device presentation metadata (display name, product photo, optional warning
 // note), keyed by the board slug parsed out of the image filename above. Emitted both
@@ -135,6 +138,18 @@ for (const rel of releases) {
     }
   }
 
+  let nodeSums = {};
+  if (names.includes('SHA256SUMS-node.txt')) {
+    const ntmp = join(tmpdir(), `cvfi-nodesums-${tag.replace(/[^\w.-]/g, '_')}.txt`);
+    try {
+      gh(['release', 'download', tag, '--repo', repo, '--pattern', 'SHA256SUMS-node.txt', '--output', ntmp, '--clobber']);
+      nodeSums = parseSums(readFileSync(ntmp, 'utf8'));
+      rmSync(ntmp, { force: true });
+    } catch (e) {
+      process.stderr.write(`warn: ${tag}: could not read SHA256SUMS-node.txt (${e.message})\n`);
+    }
+  }
+
   const assets = [];
   for (const name of names) {
     const m = name.match(IMG_RE);
@@ -166,6 +181,21 @@ for (const rel of releases) {
     }
     assets.push({ board, name: displayName, openwrt, file: name, sha256, image: meta.image || '', note: meta.note || '' });
   }
+  const nodeAssets = [];
+  for (const name of names) {
+    const m = name.match(NODE_RE);
+    if (!m) { continue; }
+    const [, type, nodeVersion] = m;
+    const sha256 = nodeSums[name];
+    if (!sha256) { continue; }
+    nodeAssets.push({
+      type,
+      name: type === 'firmware' ? 'ESP8266 Node Firmware' : 'ESP8266 Node LittleFS',
+      version: nodeVersion,
+      file: name,
+      sha256,
+    });
+  }
   if (!assets.length) { continue; }
 
   // Derive a display "version" from the tag (v0.3-beta -> 0.3-beta).
@@ -176,6 +206,7 @@ for (const rel of releases) {
     date: (rel.publishedAt || '').slice(0, 10),
     notes: rel.name || '',
     assets,
+    node_assets: nodeAssets,
   });
 }
 
