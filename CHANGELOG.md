@@ -2,6 +2,13 @@
 
 All notable changes to the JuanFi‑RE flashable releases are documented here.
 
+## beta 0.4.65 — 2026-09-19
+
+**PPPoE.** Improved server configuration, VLAN setup, status reporting, and
+mobile usability for more reliable subscriber deployments.
+
+**Maintenance.** General bug fixes and stability improvements.
+
 ## beta 0.4.64 — 2026-09-17
 
 **Reliability and performance.** Improved memory efficiency and overall system
