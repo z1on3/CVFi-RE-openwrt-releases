@@ -11,17 +11,19 @@ node** firmware.
 
 ---
 
-## What's in the current release
+## What's published here
 
-| Component | Files | Version |
-|---|---|---|
-| Router images — all supported router and access-point profiles below | `CVFi-RE-*-beta-0.4.64.bin` | **beta 0.4.64** |
-| PC / SBC appliance images — Raspberry Pi, x86‑64, and Orange Pi | `CVFi-RE-*-beta-0.4.64*.img.gz` | **beta 0.4.64** |
-| ESP8266 node — firmware + LittleFS UI | `CVFi-RE-ESP8266-node-{firmware,littlefs}-v0.4.bin` | **v0.4** |
+Every release carries the same three kinds of asset. Always take them from the
+**same release** — pick the newest one on the Releases page.
 
-> **What's new in beta 0.4.64?** See [`CHANGELOG.md`](CHANGELOG.md): improved
-> memory efficiency, overall system stability, and general usability.
-> Setting up a coin‑acceptor node? See the
+| Component | File pattern |
+|---|---|
+| Router images — one per supported router / access point below | `CVFi-RE-<device>-<openwrt>-beta-<version>.bin` |
+| PC / SBC appliance images — Raspberry Pi, x86‑64, Orange Pi | `CVFi-RE-<device>-<openwrt>-beta-<version>.img.gz` |
+| ESP8266 node — firmware + LittleFS UI | `CVFi-RE-ESP8266-node-firmware-<ver>.bin` + `…-littlefs-<ver>.bin` |
+
+> **What changed?** See [`CHANGELOG.md`](CHANGELOG.md) and the notes on the
+> release itself. Setting up a coin‑acceptor node? Start with the
 > [Node enrollment guide](NODE-ENROLLMENT.md).
 
 Verify downloads against [`SHA256SUMS.txt`](SHA256SUMS.txt):
@@ -37,11 +39,13 @@ PC / SBC appliance checksums are provided separately as
 
 ## Router images
 
-The production router images are stock **OpenWrt** (24.10.3 for most; the Linksys
-EA8300 is also offered on **23.05.5**, and the RT‑AX52 dev‑kit is on 25.12.0), with the
-CVFi‑RE portal + admin app (PHP 8 + SQLite + nftables captive portal) baked into the
-rootfs. They self‑initialise on first boot — no license server, no phone‑home, no
-encrypted app blob.
+The production router images are stock **OpenWrt** with the CVFi‑RE portal +
+admin app (PHP 8 + SQLite + nftables captive portal) baked into the rootfs. They
+self‑initialise on first boot — no license server, no phone‑home, no encrypted app
+blob.
+
+The OpenWrt base differs per device (it is part of every filename, and listed
+below). LuCI is **not** included — the CVFi admin console replaces it.
 
 | Device | OpenWrt target / profile | Notes |
 |---|---|---|
@@ -53,7 +57,13 @@ encrypted app blob.
 | Linksys **EA8300** (AC2200) | `ipq40xx/generic` · `linksys_ea8300` | **Officially supported** by OpenWrt (Qualcomm **IPQ4019**, tri‑radio, NAND, dual‑partition). Provided in **two builds: OpenWrt 23.05.5 (recommended) and 24.10.3**. ⚠️ Upgrading this board to 24.10.x can fail to boot / sysupgrade ([openwrt#17979](https://github.com/openwrt/openwrt/issues/17979)) — prefer the **23.05.5** image. Our `.bin` is a **sysupgrade** image; first install from stock Linksys firmware uses the OpenWrt **factory** flow. [Device page](https://openwrt.org/toh/linksys/ea8300). |
 | Linksys **WRT1900ACS** | `mvebu/cortexa9` · `linksys_wrt1900acs` | **Officially supported** by OpenWrt (Marvell **Armada 385**, ARMv7, 128 MB NAND / 512 MB RAM). Dual‑firmware (auto‑failover) device — first install from stock uses the OpenWrt **factory** image; our `.bin` is a **sysupgrade** image. [Device page](https://openwrt.org/toh/linksys/wrt1900acs). |
 | **EDUP EP‑RT2983** (Wi‑Fi 6) | `ramips/mt7621` · `edup_ep-rt2983` | **Officially supported** by OpenWrt (MediaTek **MT7621AT** + MT7915 802.11ax, 5× GbE, 128 MB NAND / 256 MB RAM). Built on **OpenWrt 25.12.4** (added after the 24.10 series). NAND device — our `.bin` is a **sysupgrade** image; first install from stock uses the OpenWrt **factory** image. [Device page](https://openwrt.org/toh/hwdata/edup/edup_ep-rt2983). |
-| ASUS **RT‑AX52** _(dev kit)_ | `mediatek/filogic` · `asus_rt-ax52` | **Dev‑kit / experimental** build on **OpenWrt 25.12.0** (aarch64) — the development reference board, published for testers. Not on the 24.10.3 base above; validate carefully. |
+| **MERCUSYS MR70X v1 / MR1800X** | `ramips/mt7621` · `mercusys_mr70x-v1` | Mainline OpenWrt profile (MT7621). Built on **OpenWrt 25.12.5**. |
+| Ruijie **RG‑EW3200GX PRO** | `mediatek/mt7622` · `ruijie_rg-ew3200gx-pro` | Mainline OpenWrt profile (MT7622). Built on **OpenWrt 24.10.5**. |
+| Comfast **CF‑EW72 v2** | `ramips/mt7621` · `comfast_cf-ew72-v2` | Mainline OpenWrt profile (MT7621). Built on **OpenWrt 25.12.5**. |
+| Comfast **CF‑EW71 v2** | `ath79/generic` · `comfast_cf-ew71-v2` | Mainline OpenWrt profile (ath79). Built on **OpenWrt 25.12.2**. |
+| ASUS **RT‑AC68U** | `bcm53xx/generic` · `asus_rt-ac68u` | ⚠️ **No working Wi‑Fi.** The Broadcom BCM4708 radio has no usable open driver in OpenWrt (b43: partial 2.4 GHz, no 5 GHz). The image boots and routes fine over **Ethernet**, but this board **cannot serve its own hotspot** — use it wired, or paired with a separate AP / coin node. Built on **OpenWrt 24.10.5**. |
+| TP‑Link **EAP225** — v1 / v3 / v4 / outdoor v1 / outdoor v3 / wall v2 | `ath79/generic` · `tplink_eap225-*` | ⚠️ **Experimental — not yet validated on hardware.** Single‑port PoE APs: the lone Ethernet port becomes WAN and the built‑in Wi‑Fi serves the `10.0.0.1/24` hotspot. **v2** hardware flashes the **v1** image (OpenWrt has no separate v2 profile). **v5** is not offered — upstream lists its Wi‑Fi as unsupported. Built on **OpenWrt 24.10.3**. |
+| ASUS **RT‑AX52** _(dev kit)_ | `mediatek/filogic` · `asus_rt-ax52` | **Dev‑kit / experimental** build on **OpenWrt 25.12.0** (aarch64) — the development reference board, published for testers; validate carefully. |
 
 ### First‑boot defaults (vendo appliance)
 
@@ -170,7 +180,7 @@ directly — decompress it to a plain `.img` first.**
 
 > **`dd` (macOS / Linux CLI) alternative:**
 > ```sh
-> gunzip -c CVFi-RE-x86-64-24.10.3-beta-….img.gz | sudo dd of=/dev/sdX bs=4M status=progress conv=fsync
+> gunzip -c CVFi-RE-x86-64-….img.gz | sudo dd of=/dev/sdX bs=4M status=progress conv=fsync
 > ```
 > Replace `/dev/sdX` with your target device (`lsblk` / `diskutil list`). **Wrong
 > device = wiped disk** — check twice.
@@ -190,8 +200,8 @@ directly — decompress it to a plain `.img` first.**
 > uncompressed `.img`.
 
 ⚠️ **Beta.** These appliance images self‑configure the network on first boot; if you
-have a specific LAN/WAN layout, adjust it afterward in the admin / LuCI. Each image
-is validated only on its listed platform.
+have a specific LAN/WAN layout, adjust it afterward in the admin console. Each
+image is validated only on its listed platform.
 
 ---
 
@@ -217,10 +227,13 @@ layout, so the FS goes at **`0x300000`** (the FS bin is exactly `0xFA000` = 1,02
 
 ```sh
 # firmware (first bin) → 0x0
-esptool.py --port <PORT> --baud 460800 write_flash 0x0 CVFi-RE-ESP8266-node-firmware-v0.4.bin
+esptool.py --port <PORT> --baud 460800 write_flash 0x0 CVFi-RE-ESP8266-node-firmware-….bin
 # LittleFS (second bin) → 0x300000  (NOT 0x200000 — that is the 2 MB-FS layout)
-esptool.py --port <PORT> --baud 460800 write_flash 0x300000 CVFi-RE-ESP8266-node-littlefs-v0.4.bin
+esptool.py --port <PORT> --baud 460800 write_flash 0x300000 CVFi-RE-ESP8266-node-littlefs-….bin
 ```
+
+Substitute the exact filenames you downloaded — both bins come from the same
+release and carry the same version.
 
 Or let PlatformIO place the FS for you: `pio run -e esp12e -t uploadfs`.
 
@@ -235,13 +248,13 @@ Or let PlatformIO place the FS for you: `pio run -e esp12e -t uploadfs`.
 1. **Serial port** ➊ — the node's COM port (**Reload** if empty; install the
    CP2102/CH340 USB‑serial driver first if none appears).
 2. **NodeMCU firmware** ➋ — Browse to the **firmware** bin
-   (`CVFi-RE-ESP8266-node-firmware-v0.4.bin`).
+   (`CVFi-RE-ESP8266-node-firmware-….bin`).
 3. **Offset Address** ➌ — `0x000000` for the firmware.
 4. **Baud rate** ➍ `115200` · **Flash mode** ➎ `Dual I/O (DIO)` ·
    **Erase flash** ➏ `yes` on a first‑ever flash (else `no`).
 5. Click **Flash NodeMCU** ➐ and wait for success in the console.
 6. **Second pass:** load the **LittleFS** bin
-   (`CVFi-RE-ESP8266-node-littlefs-v0.4.bin`) in ➋ with
+   (`CVFi-RE-ESP8266-node-littlefs-….bin`) in ➋ with
    **Offset Address ➌ = `0x300000`**, set Erase flash to `no`, and Flash again.
 
 > ⚠️ The LittleFS bin **must** go at `0x300000`, not `0x0`. On the first pass the
