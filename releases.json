@@ -8,87 +8,6 @@
       "notes": "CVFi-RE stable 0.5.0",
       "assets": [
         {
-          "board": "airpho-ar-w410",
-          "name": "AIRPHO AR-W410",
-          "openwrt": "24.10.3",
-          "file": "CVFi-RE-airpho-ar-w410-24.10.3-stable-0.5.0.bin",
-          "sha256": "a5723c5f1ce260cfb79f5a52c390adcdf5383086ab04ffbaf946bc233051c11e",
-          "image": "",
-          "note": "ZBT WG3526 (16M) clone — identical image to the ZBT WG3526; in-product updates track the ZBT WG3526 asset."
-        },
-        {
-          "board": "asus-rt-ac68u",
-          "name": "ASUS RT-AC68U",
-          "openwrt": "24.10.5",
-          "file": "CVFi-RE-asus-rt-ac68u-24.10.5-stable-0.5.0.bin",
-          "sha256": "2099e3234a0a130323f6420ae235943e90e1a1872bee42b96a6a1cea2ae632f5",
-          "image": "https://dlcdnwebimgs.asus.com/gain/6670e848-ba84-47e0-97d5-fd076ac3a137/w185",
-          "note": "⚠ Wi-Fi unsupported on this Broadcom board in OpenWrt — routes over Ethernet only and cannot serve its own hotspot. Use it wired or paired with an external AP node. First flash from stock ASUS uses the .trx (this image is that .trx under a .bin name)."
-        },
-        {
-          "board": "asus-rt-ax52",
-          "name": "ASUS RT-AX52",
-          "openwrt": "25.12.0",
-          "file": "CVFi-RE-asus-rt-ax52-25.12.0-stable-0.5.0.bin",
-          "sha256": "80b044b4835b99b1977d2a9fa8ed361e206730b621874007ed299c9c6c84f242",
-          "image": "https://image.alza.cz/products/Asus23_022/Asus23_022-01.jpg",
-          "note": ""
-        },
-        {
-          "board": "comfast-cf-ew71-v2",
-          "name": "Comfast CF-EW71 v2",
-          "openwrt": "25.12.2",
-          "file": "CVFi-RE-comfast-cf-ew71-v2-25.12.2-stable-0.5.0.bin",
-          "sha256": "b596f70ec5ce5d11d5b9a2576e89542f1c71683010cbaad1a4526351b584d46c",
-          "image": "",
-          "note": ""
-        },
-        {
-          "board": "comfast-cf-ew72-v2",
-          "name": "Comfast CF-EW72 v2",
-          "openwrt": "25.12.5",
-          "file": "CVFi-RE-comfast-cf-ew72-v2-25.12.5-stable-0.5.0.bin",
-          "sha256": "7eed2befd8f4cda8422da828053ed16fff4d363e59e83f8ff712f40c837235e9",
-          "image": "https://comfastgroup.com/wp-content/uploads/2024/09/cf-ew72-v2.webp",
-          "note": ""
-        },
-        {
-          "board": "comfast-cf-n5-v2",
-          "name": "Comfast CF-N5 v2",
-          "openwrt": "24.10.3",
-          "file": "CVFi-RE-comfast-cf-n5-v2-24.10.3-stable-0.5.0.bin",
-          "sha256": "a5723c5f1ce260cfb79f5a52c390adcdf5383086ab04ffbaf946bc233051c11e",
-          "image": "https://comfastgroup.com/wp-content/uploads/2024/09/cf-n5-v2.webp",
-          "note": ""
-        },
-        {
-          "board": "eap225-outdoor-v1",
-          "name": "TP-Link EAP225-Outdoor v1",
-          "openwrt": "24.10.3",
-          "file": "CVFi-RE-eap225-outdoor-v1-24.10.3-stable-0.5.0.bin",
-          "sha256": "5acd49d6e9fe327f68db94ccb2ca9a4ee015d19ae3f5676a2fac13db8323aae4",
-          "image": "",
-          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
-        },
-        {
-          "board": "eap225-outdoor-v3",
-          "name": "TP-Link EAP225-Outdoor v3",
-          "openwrt": "24.10.3",
-          "file": "CVFi-RE-eap225-outdoor-v3-24.10.3-stable-0.5.0.bin",
-          "sha256": "3aeaad8e932fffd7e256ae6ab6509526eeb4517d9732c51a8e67c9104e9583b6",
-          "image": "",
-          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
-        },
-        {
-          "board": "eap225-v1",
-          "name": "TP-Link EAP225 v1",
-          "openwrt": "24.10.3",
-          "file": "CVFi-RE-eap225-v1-24.10.3-stable-0.5.0.bin",
-          "sha256": "516aa5d3162013d9ff8dbf2f756bc214f55493d67158b0cb9d5a7d05d5e90202",
-          "image": "",
-          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
-        },
-        {
           "board": "eap225-v3",
           "name": "TP-Link EAP225 v3",
           "openwrt": "24.10.3",
@@ -107,15 +26,6 @@
           "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
         },
         {
-          "board": "eap225-wall-v2",
-          "name": "TP-Link EAP225-Wall v2",
-          "openwrt": "24.10.3",
-          "file": "CVFi-RE-eap225-wall-v2-24.10.3-stable-0.5.0.bin",
-          "sha256": "982ced98445dc43bb189fb8f4fed10c55ee15efc5d667c58cf1965f26cf658ed",
-          "image": "",
-          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
-        },
-        {
           "board": "edup-ep-rt2983",
           "name": "EDUP EP-RT2983",
           "openwrt": "25.12.4",
@@ -125,13 +35,13 @@
           "note": ""
         },
         {
-          "board": "linksys-ea8300",
-          "name": "Linksys EA8300",
-          "openwrt": "23.05.5",
-          "file": "CVFi-RE-linksys-ea8300-23.05.5-stable-0.5.0.bin",
-          "sha256": "d36b0d32700e07be98cc0e94a253cdecd4678687f3132cd55e0a4b2a4094d1e3",
+          "board": "eap225-wall-v2",
+          "name": "TP-Link EAP225-Wall v2",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-eap225-wall-v2-24.10.3-stable-0.5.0.bin",
+          "sha256": "982ced98445dc43bb189fb8f4fed10c55ee15efc5d667c58cf1965f26cf658ed",
           "image": "",
-          "note": ""
+          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
         },
         {
           "board": "linksys-ea8300",
@@ -139,6 +49,15 @@
           "openwrt": "24.10.3",
           "file": "CVFi-RE-linksys-ea8300-24.10.3-stable-0.5.0.bin",
           "sha256": "98b2854ba97b911f7fda5d7c1957dbfae379ceca7535e41b06003a88b1783ec4",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "linksys-ea8300",
+          "name": "Linksys EA8300",
+          "openwrt": "23.05.5",
+          "file": "CVFi-RE-linksys-ea8300-23.05.5-stable-0.5.0.bin",
+          "sha256": "d36b0d32700e07be98cc0e94a253cdecd4678687f3132cd55e0a4b2a4094d1e3",
           "image": "",
           "note": ""
         },
@@ -195,6 +114,42 @@
           "sha256": "a5723c5f1ce260cfb79f5a52c390adcdf5383086ab04ffbaf946bc233051c11e",
           "image": "",
           "note": ""
+        },
+        {
+          "board": "asus-rt-ac68u",
+          "name": "ASUS RT-AC68U",
+          "openwrt": "24.10.5",
+          "file": "CVFi-RE-asus-rt-ac68u-24.10.5-stable-0.5.0.bin",
+          "sha256": "2099e3234a0a130323f6420ae235943e90e1a1872bee42b96a6a1cea2ae632f5",
+          "image": "https://dlcdnwebimgs.asus.com/gain/6670e848-ba84-47e0-97d5-fd076ac3a137/w185",
+          "note": "⚠ Wi-Fi unsupported on this Broadcom board in OpenWrt — routes over Ethernet only and cannot serve its own hotspot. Use it wired or paired with an external AP node. First flash from stock ASUS uses the .trx (this image is that .trx under a .bin name)."
+        },
+        {
+          "board": "comfast-cf-ew71-v2",
+          "name": "Comfast CF-EW71 v2",
+          "openwrt": "25.12.2",
+          "file": "CVFi-RE-comfast-cf-ew71-v2-25.12.2-stable-0.5.0.bin",
+          "sha256": "b596f70ec5ce5d11d5b9a2576e89542f1c71683010cbaad1a4526351b584d46c",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "comfast-cf-n5-v2",
+          "name": "Comfast CF-N5 v2",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-comfast-cf-n5-v2-24.10.3-stable-0.5.0.bin",
+          "sha256": "a5723c5f1ce260cfb79f5a52c390adcdf5383086ab04ffbaf946bc233051c11e",
+          "image": "https://comfastgroup.com/wp-content/uploads/2024/09/cf-n5-v2.webp",
+          "note": ""
+        },
+        {
+          "board": "eap225-outdoor-v1",
+          "name": "TP-Link EAP225-Outdoor v1",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-eap225-outdoor-v1-24.10.3-stable-0.5.0.bin",
+          "sha256": "5acd49d6e9fe327f68db94ccb2ca9a4ee015d19ae3f5676a2fac13db8323aae4",
+          "image": "",
+          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
         }
       ],
       "node_assets": [
