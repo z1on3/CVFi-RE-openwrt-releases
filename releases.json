@@ -8,33 +8,6 @@
       "notes": "CVFi-RE stable 0.5.0",
       "assets": [
         {
-          "board": "ruijie-rg-ew1200g-pro-v1.1",
-          "name": "Ruijie RG-EW1200G PRO v1.1",
-          "openwrt": "24.10.3",
-          "file": "CVFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-stable-0.5.0.bin",
-          "sha256": "bd3fbd2e2c0014cce31e1f95484eaa5f5d2f59bc324a78e45e20121502a3ddb8",
-          "image": "https://eo-sgp-cos.ruijie.com/background/other/2023-10-27/7b9d778c2293490a993760bc68f52396.png",
-          "note": ""
-        },
-        {
-          "board": "ruijie-rg-ew3200gx-pro",
-          "name": "Ruijie RG-EW3200GX PRO",
-          "openwrt": "24.10.5",
-          "file": "CVFi-RE-ruijie-rg-ew3200gx-pro-24.10.5-stable-0.5.0.bin",
-          "sha256": "3c0da4d801f429d7e35ff0a50344eee0a695fb2349e9d630d05ecabdcc56266d",
-          "image": "https://eo-sgp-cos.ruijie.com/background/other/2023-10-30/b2b529094b4d432fa998eba11a445b19.png",
-          "note": ""
-        },
-        {
-          "board": "zbt-wg3526-16m",
-          "name": "ZBT WG3526 (16M)",
-          "openwrt": "24.10.3",
-          "file": "CVFi-RE-zbt-wg3526-16m-24.10.3-stable-0.5.0.bin",
-          "sha256": "a5723c5f1ce260cfb79f5a52c390adcdf5383086ab04ffbaf946bc233051c11e",
-          "image": "",
-          "note": ""
-        },
-        {
           "board": "airpho-ar-w410",
           "name": "AIRPHO AR-W410",
           "openwrt": "24.10.3",
@@ -42,6 +15,24 @@
           "sha256": "a5723c5f1ce260cfb79f5a52c390adcdf5383086ab04ffbaf946bc233051c11e",
           "image": "",
           "note": "ZBT WG3526 (16M) clone — identical image to the ZBT WG3526; in-product updates track the ZBT WG3526 asset."
+        },
+        {
+          "board": "asus-rt-ac68u",
+          "name": "ASUS RT-AC68U",
+          "openwrt": "24.10.5",
+          "file": "CVFi-RE-asus-rt-ac68u-24.10.5-stable-0.5.0.bin",
+          "sha256": "2099e3234a0a130323f6420ae235943e90e1a1872bee42b96a6a1cea2ae632f5",
+          "image": "https://dlcdnwebimgs.asus.com/gain/6670e848-ba84-47e0-97d5-fd076ac3a137/w185",
+          "note": "⚠ Wi-Fi unsupported on this Broadcom board in OpenWrt — routes over Ethernet only and cannot serve its own hotspot. Use it wired or paired with an external AP node. First flash from stock ASUS uses the .trx (this image is that .trx under a .bin name)."
+        },
+        {
+          "board": "asus-rt-ax52",
+          "name": "ASUS RT-AX52",
+          "openwrt": "25.12.0",
+          "file": "CVFi-RE-asus-rt-ax52-25.12.0-stable-0.5.0.bin",
+          "sha256": "80b044b4835b99b1977d2a9fa8ed361e206730b621874007ed299c9c6c84f242",
+          "image": "https://image.alza.cz/products/Asus23_022/Asus23_022-01.jpg",
+          "note": ""
         },
         {
           "board": "comfast-cf-ew71-v2",
@@ -60,24 +51,6 @@
           "sha256": "7eed2befd8f4cda8422da828053ed16fff4d363e59e83f8ff712f40c837235e9",
           "image": "https://comfastgroup.com/wp-content/uploads/2024/09/cf-ew72-v2.webp",
           "note": ""
-        },
-        {
-          "board": "asus-rt-ax52",
-          "name": "ASUS RT-AX52",
-          "openwrt": "25.12.0",
-          "file": "CVFi-RE-asus-rt-ax52-25.12.0-stable-0.5.0.bin",
-          "sha256": "80b044b4835b99b1977d2a9fa8ed361e206730b621874007ed299c9c6c84f242",
-          "image": "https://image.alza.cz/products/Asus23_022/Asus23_022-01.jpg",
-          "note": ""
-        },
-        {
-          "board": "asus-rt-ac68u",
-          "name": "ASUS RT-AC68U",
-          "openwrt": "24.10.5",
-          "file": "CVFi-RE-asus-rt-ac68u-24.10.5-stable-0.5.0.bin",
-          "sha256": "2099e3234a0a130323f6420ae235943e90e1a1872bee42b96a6a1cea2ae632f5",
-          "image": "https://dlcdnwebimgs.asus.com/gain/6670e848-ba84-47e0-97d5-fd076ac3a137/w185",
-          "note": "⚠ Wi-Fi unsupported on this Broadcom board in OpenWrt — routes over Ethernet only and cannot serve its own hotspot. Use it wired or paired with an external AP node. First flash from stock ASUS uses the .trx (this image is that .trx under a .bin name)."
         },
         {
           "board": "comfast-cf-n5-v2",
@@ -134,6 +107,15 @@
           "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
         },
         {
+          "board": "eap225-wall-v2",
+          "name": "TP-Link EAP225-Wall v2",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-eap225-wall-v2-24.10.3-stable-0.5.0.bin",
+          "sha256": "982ced98445dc43bb189fb8f4fed10c55ee15efc5d667c58cf1965f26cf658ed",
+          "image": "",
+          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
+        },
+        {
           "board": "edup-ep-rt2983",
           "name": "EDUP EP-RT2983",
           "openwrt": "25.12.4",
@@ -143,13 +125,76 @@
           "note": ""
         },
         {
-          "board": "eap225-wall-v2",
-          "name": "TP-Link EAP225-Wall v2",
-          "openwrt": "24.10.3",
-          "file": "CVFi-RE-eap225-wall-v2-24.10.3-stable-0.5.0.bin",
-          "sha256": "982ced98445dc43bb189fb8f4fed10c55ee15efc5d667c58cf1965f26cf658ed",
+          "board": "linksys-ea8300",
+          "name": "Linksys EA8300",
+          "openwrt": "23.05.5",
+          "file": "CVFi-RE-linksys-ea8300-23.05.5-stable-0.5.0.bin",
+          "sha256": "d36b0d32700e07be98cc0e94a253cdecd4678687f3132cd55e0a4b2a4094d1e3",
           "image": "",
-          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
+          "note": ""
+        },
+        {
+          "board": "linksys-ea8300",
+          "name": "Linksys EA8300",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-linksys-ea8300-24.10.3-stable-0.5.0.bin",
+          "sha256": "98b2854ba97b911f7fda5d7c1957dbfae379ceca7535e41b06003a88b1783ec4",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "linksys-wrt1900acs",
+          "name": "Linksys WRT1900ACS",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-linksys-wrt1900acs-24.10.3-stable-0.5.0.bin",
+          "sha256": "71f8c91a6d37b5d06e9b1f71912af280d3b0c001fda561e2e5c6f182475e3b55",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "mercusys-mr70x-v1",
+          "name": "Mercusys MR70X v1",
+          "openwrt": "25.12.5",
+          "file": "CVFi-RE-mercusys-mr70x-v1-25.12.5-stable-0.5.0.bin",
+          "sha256": "14e059920286ceea5a6ff29c5b00d1c7fb61bd5943a91846a8e1307c32583962",
+          "image": "https://static.mercusys.com/product-image/01_large20201223072930.jpg",
+          "note": ""
+        },
+        {
+          "board": "newifi-d2",
+          "name": "Newifi D2",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-newifi-d2-24.10.3-stable-0.5.0.bin",
+          "sha256": "902b5d81a5ba370128acef9a4be6cf6d50ea02d0c1d6939c4b3ba120acbd7d5f",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "ruijie-rg-ew1200g-pro-v1.1",
+          "name": "Ruijie RG-EW1200G PRO v1.1",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-stable-0.5.0.bin",
+          "sha256": "bd3fbd2e2c0014cce31e1f95484eaa5f5d2f59bc324a78e45e20121502a3ddb8",
+          "image": "https://eo-sgp-cos.ruijie.com/background/other/2023-10-27/7b9d778c2293490a993760bc68f52396.png",
+          "note": ""
+        },
+        {
+          "board": "ruijie-rg-ew3200gx-pro",
+          "name": "Ruijie RG-EW3200GX PRO",
+          "openwrt": "24.10.5",
+          "file": "CVFi-RE-ruijie-rg-ew3200gx-pro-24.10.5-stable-0.5.0.bin",
+          "sha256": "3c0da4d801f429d7e35ff0a50344eee0a695fb2349e9d630d05ecabdcc56266d",
+          "image": "https://eo-sgp-cos.ruijie.com/background/other/2023-10-30/b2b529094b4d432fa998eba11a445b19.png",
+          "note": ""
+        },
+        {
+          "board": "zbt-wg3526-16m",
+          "name": "ZBT WG3526 (16M)",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-zbt-wg3526-16m-24.10.3-stable-0.5.0.bin",
+          "sha256": "a5723c5f1ce260cfb79f5a52c390adcdf5383086ab04ffbaf946bc233051c11e",
+          "image": "",
+          "note": ""
         }
       ],
       "node_assets": [
