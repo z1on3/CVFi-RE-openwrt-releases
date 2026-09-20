@@ -19,6 +19,33 @@ import { join } from 'node:path';
 const repo = process.argv[2] || 'z1on3/CVFi-RE-openwrt-releases';
 const gh = (args) => execFileSync('gh', args, { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
 
+// Release channels, longest-suffix-first so a longer name can never be shadowed
+// by a shorter one that happens to be its tail.
+const CHANNELS = ['stable', 'beta'];
+
+// Fallback caveat per channel, shown by a download page on a device card that has
+// no caveat of its own. Editable as data in disclaimers.json so the wording can
+// change without touching this script or the consumer; the built-in values below
+// are only a safety net if that file is missing or unreadable.
+const DISCLAIMERS = (() => {
+  const builtin = {
+    beta: "⚠ Beta — flash at your own risk. We're not responsible for any damage to your device.",
+    stable: "⚠ Flash at your own risk. We're not responsible for any damage to your device.",
+    default: "⚠ Flash at your own risk. We're not responsible for any damage to your device.",
+  };
+  try {
+    const raw = JSON.parse(readFileSync(new URL('../disclaimers.json', import.meta.url), 'utf8'));
+    const picked = {};
+    for (const [k, v] of Object.entries(raw)) {
+      if (!k.startsWith('_') && typeof v === 'string') { picked[k] = v; }
+    }
+    return { ...builtin, ...picked };
+  } catch (e) {
+    process.stderr.write(`warn: disclaimers.json unreadable (${e.message}); using built-in text\n`);
+    return builtin;
+  }
+})();
+
 // Router image filename: CVFi-RE-<board>-<openwrt>-beta-<rel>.bin
 // board slugs contain dashes; the OpenWrt version is the N.N.N token before -beta-.
 //
@@ -205,9 +232,16 @@ for (const rel of releases) {
 
   // Derive a display "version" from the tag (v0.3-beta -> 0.3-beta).
   const version = tag.replace(/^v/, '');
+  // Channel comes from the tag suffix, and carries the fallback caveat a download
+  // page shows for a device with no caveat of its own. Emitting it per release
+  // rather than per manifest is deliberate: an older beta listed for a downgrade
+  // still says beta, while the current stable does not.
+  const channel = CHANNELS.find((c) => version.endsWith(`-${c}`)) || '';
   out.releases.push({
     version,
     tag,
+    channel,
+    disclaimer: DISCLAIMERS[channel] ?? DISCLAIMERS.default ?? '',
     date: (rel.publishedAt || '').slice(0, 10),
     notes: rel.name || '',
     assets,
