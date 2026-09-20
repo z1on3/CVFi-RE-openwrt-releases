@@ -1,6 +1,7 @@
 # Changelog
 
-All notable changes to the JuanFi‑RE flashable releases are documented here.
+All notable changes to the CVFi‑RE flashable releases are documented here.
+Entries from before the rename keep the name they were published under.
 
 ## beta 0.4.65 — 2026-09-19
 

@@ -1,6 +1,6 @@
-# JuanFi Reloaded — Flashable Releases
+# CVFi Reloaded — Flashable Releases
 
-Prebuilt, ready-to-flash firmware for **JuanFi Reloaded (JuanFi‑RE)** — a
+Prebuilt, ready-to-flash firmware for **CVFi Reloaded (CVFi‑RE)** — a
 clean‑room, fully‑offline PisoWiFi captive portal (coin / voucher / points /
 free‑time) built on stock **OpenWrt**, plus the matching **ESP8266 coin‑acceptor
 node** firmware.
@@ -8,6 +8,11 @@ node** firmware.
 > Downloads live on the [**Releases**](../../releases) page. This repository holds
 > only the release notes and checksums — the binaries are attached as release
 > assets.
+
+> **This project was renamed to CVFi Reloaded.** Images up to **beta 0.4.64**
+> are still named `JuanFi-RE-…` and ship the SSID `JuanFi Reloaded`; later
+> images use the new name. Updating in place keeps your existing Wi‑Fi settings,
+> so only a fresh install picks up the new default SSID.
 
 ---
 
@@ -39,7 +44,7 @@ PC / SBC appliance checksums are provided separately as
 
 The production router images are stock **OpenWrt** (24.10.3 for most; the Linksys
 EA8300 is also offered on **23.05.5**, and the RT‑AX52 dev‑kit is on 25.12.0), with the
-JuanFi‑RE portal + admin app (PHP 8 + SQLite + nftables captive portal) baked into the
+CVFi‑RE portal + admin app (PHP 8 + SQLite + nftables captive portal) baked into the
 rootfs. They self‑initialise on first boot — no license server, no phone‑home, no
 encrypted app blob.
 
@@ -99,7 +104,7 @@ failed.
 
 ## PC & single‑board computer images (Raspberry Pi / x86‑64 / Orange Pi)
 
-Besides the router `.bin` images above, JuanFi‑RE also ships as **whole‑disk
+Besides the router `.bin` images above, CVFi‑RE also ships as **whole‑disk
 appliance images** for PCs and single‑board computers. These are **not** OpenWrt
 sysupgrade files — they are gzipped disk images (`.img.gz`) you **write to a USB
 stick, SD card, or SSD/eMMC** with a tool like **Rufus** or **balenaEtcher**, then
@@ -287,12 +292,12 @@ a new one on the router and try again.
 
 ## Building from source
 
-These binaries are built from the [JuanFi Reloaded source](https://openwrt.org/)
+These binaries are built from the [CVFi Reloaded source](https://openwrt.org/)
 with the OpenWrt Image Builder (router) and PlatformIO (`espressif8266`, ESP node).
 See the source repo's `firmware/openwrt/IMAGEBUILDER.md` and
 `firmware/esp8266-node/platformio.ini`.
 
 ---
 
-_JuanFi Reloaded is an independent, clean‑room implementation. Not affiliated with
+_CVFi Reloaded is an independent, clean‑room implementation. Not affiliated with
 Comfast, ZBT, or any coin‑acceptor vendor._

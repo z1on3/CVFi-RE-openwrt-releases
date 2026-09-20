@@ -1,12 +1,15 @@
 # Enrolling an ESP8266 Coin-Acceptor Node
 
-A freshly-flashed JuanFi‑RE coin‑acceptor **node** (NodeMCU / ESP8266) now boots into a
+A freshly-flashed CVFi‑RE coin‑acceptor **node** (NodeMCU / ESP8266) now boots into a
 **guided Setup wizard** — connect to it from a phone and it walks you through securing
 it, joining your Wi‑Fi, linking the router, and **pairing**. Pairing is code‑based: the
 router shows a 6‑digit code, you type it on the node, and the node fetches its auth
 **token automatically** — you never copy/paste the token by hand.
 
-There are two consoles involved, don't mix them up:
+There are two consoles involved, don't mix them up. The titles below are what
+the currently published binaries show; images built after the rename to **CVFi
+Reloaded** show the new name in the same places.
+
 
 | Console | Where | Title |
 |---|---|---|
@@ -17,7 +20,7 @@ There are two consoles involved, don't mix them up:
 
 ## Prerequisites
 
-- The node is **flashed** with **both** the JuanFi‑RE **firmware** *and* **LittleFS**
+- The node is **flashed** with **both** the CVFi‑RE **firmware** *and* **LittleFS**
   images (see the ESP8266 section in the [README](README.md)). The wizard UI lives in
   the LittleFS image — firmware alone won't show it.
 - **Re‑using a node that was provisioned before? Erase the chip first.** The node's
