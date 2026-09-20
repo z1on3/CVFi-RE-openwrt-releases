@@ -26,7 +26,7 @@ const gh = (args) => execFileSync('gh', args, { encoding: 'utf8', maxBuffer: 64 
 // forms must keep parsing: the picker offers older releases for reinstall/downgrade,
 // and an asset that fails to parse here is simply absent from releases.json — which
 // reads on-device as "no compatible image", not as an error anyone would notice.
-const IMG_RE = /^(?:CVFi|JuanFi)-RE-(.+)-(\d+\.\d+\.\d+)-beta-(.+)\.bin$/;
+const IMG_RE = /^(?:CVFi|JuanFi)-RE-(.+)-(\d+\.\d+\.\d+)-(?:beta|stable)-(.+)\.bin$/;
 
 // PC/SBC appliance image filename: CVFi-RE-<board>-<openwrt>-beta-<rel>.img.gz
 // (whole-disk images written to SD/eMMC/disk, e.g. Raspberry Pi, x86-64, Orange Pi).
@@ -34,7 +34,7 @@ const IMG_RE = /^(?:CVFi|JuanFi)-RE-(.+)-(\d+\.\d+\.\d+)-beta-(.+)\.bin$/;
 // is ...-<rel>-efi.img.gz and still parses board == 'x86-64'. These are download-only:
 // their board slugs are deliberately absent from the on-device cvfi_board_slug map, so
 // the router OTA picker never matches (and never tries to sysupgrade a whole-disk image).
-const APP_RE = /^(?:CVFi|JuanFi)-RE-(.+)-(\d+\.\d+\.\d+)-beta-(.+)\.img\.gz$/;
+const APP_RE = /^(?:CVFi|JuanFi)-RE-(.+)-(\d+\.\d+\.\d+)-(?:beta|stable)-(.+)\.img\.gz$/;
 
 // ESP8266 node images are versioned independently from the router release. Every
 // release carries both the application firmware and its required LittleFS image.
