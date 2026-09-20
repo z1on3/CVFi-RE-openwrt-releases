@@ -8,51 +8,6 @@
       "notes": "CVFi-RE stable 0.5.0",
       "assets": [
         {
-          "board": "airpho-ar-w410",
-          "name": "AIRPHO AR-W410",
-          "openwrt": "24.10.3",
-          "file": "CVFi-RE-airpho-ar-w410-24.10.3-stable-0.5.0.bin",
-          "sha256": "a5723c5f1ce260cfb79f5a52c390adcdf5383086ab04ffbaf946bc233051c11e",
-          "image": "",
-          "note": "ZBT WG3526 (16M) clone — identical image to the ZBT WG3526; in-product updates track the ZBT WG3526 asset."
-        },
-        {
-          "board": "asus-rt-ac68u",
-          "name": "ASUS RT-AC68U",
-          "openwrt": "24.10.5",
-          "file": "CVFi-RE-asus-rt-ac68u-24.10.5-stable-0.5.0.bin",
-          "sha256": "2099e3234a0a130323f6420ae235943e90e1a1872bee42b96a6a1cea2ae632f5",
-          "image": "https://dlcdnwebimgs.asus.com/gain/6670e848-ba84-47e0-97d5-fd076ac3a137/w185",
-          "note": "⚠ Wi-Fi unsupported on this Broadcom board in OpenWrt — routes over Ethernet only and cannot serve its own hotspot. Use it wired or paired with an external AP node. First flash from stock ASUS uses the .trx (this image is that .trx under a .bin name)."
-        },
-        {
-          "board": "asus-rt-ax52",
-          "name": "ASUS RT-AX52",
-          "openwrt": "25.12.0",
-          "file": "CVFi-RE-asus-rt-ax52-25.12.0-stable-0.5.0.bin",
-          "sha256": "80b044b4835b99b1977d2a9fa8ed361e206730b621874007ed299c9c6c84f242",
-          "image": "https://image.alza.cz/products/Asus23_022/Asus23_022-01.jpg",
-          "note": ""
-        },
-        {
-          "board": "comfast-cf-ew71-v2",
-          "name": "Comfast CF-EW71 v2",
-          "openwrt": "25.12.2",
-          "file": "CVFi-RE-comfast-cf-ew71-v2-25.12.2-stable-0.5.0.bin",
-          "sha256": "b596f70ec5ce5d11d5b9a2576e89542f1c71683010cbaad1a4526351b584d46c",
-          "image": "",
-          "note": ""
-        },
-        {
-          "board": "comfast-cf-ew72-v2",
-          "name": "Comfast CF-EW72 v2",
-          "openwrt": "25.12.5",
-          "file": "CVFi-RE-comfast-cf-ew72-v2-25.12.5-stable-0.5.0.bin",
-          "sha256": "7eed2befd8f4cda8422da828053ed16fff4d363e59e83f8ff712f40c837235e9",
-          "image": "https://comfastgroup.com/wp-content/uploads/2024/09/cf-ew72-v2.webp",
-          "note": ""
-        },
-        {
           "board": "comfast-cf-n5-v2",
           "name": "Comfast CF-N5 v2",
           "openwrt": "24.10.3",
