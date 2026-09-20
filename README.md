@@ -19,8 +19,11 @@ Every release carries the same three kinds of asset. Always take them from the
 | Component | File pattern |
 |---|---|
 | Router images — one per supported router / access point below | `CVFi-RE-<device>-<openwrt>-beta-<version>.bin` |
-| PC / SBC appliance images — Raspberry Pi, x86‑64, Orange Pi | `CVFi-RE-<device>-<openwrt>-beta-<version>.img.gz` |
+| PC / SBC appliance images — Raspberry Pi, x86‑64, Orange Pi ¹ | `CVFi-RE-<device>-<openwrt>-beta-<version>.img.gz` |
 | ESP8266 node — firmware + LittleFS UI | `CVFi-RE-ESP8266-node-firmware-<ver>.bin` + `…-littlefs-<ver>.bin` |
+
+¹ The PC / SBC appliance images are validated separately from the router
+lineup and do not accompany every release — check the release's own asset list.
 
 > **What changed?** See [`CHANGELOG.md`](CHANGELOG.md) and the notes on the
 > release itself. Setting up a coin‑acceptor node? Start with the
