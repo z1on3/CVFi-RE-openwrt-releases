@@ -16,24 +16,29 @@ import { readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-const repo = process.argv[2] || 'z1on3/JuanFi-RE-openwrt-releases';
+const repo = process.argv[2] || 'z1on3/CVFi-RE-openwrt-releases';
 const gh = (args) => execFileSync('gh', args, { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
 
-// Router image filename: JuanFi-RE-<board>-<openwrt>-beta-<rel>.bin
+// Router image filename: CVFi-RE-<board>-<openwrt>-beta-<rel>.bin
 // board slugs contain dashes; the OpenWrt version is the N.N.N token before -beta-.
-const IMG_RE = /^JuanFi-RE-(.+)-(\d+\.\d+\.\d+)-beta-(.+)\.bin$/;
+//
+// Assets published before the product rename lead with JuanFi-RE- instead, and both
+// forms must keep parsing: the picker offers older releases for reinstall/downgrade,
+// and an asset that fails to parse here is simply absent from releases.json — which
+// reads on-device as "no compatible image", not as an error anyone would notice.
+const IMG_RE = /^(?:CVFi|JuanFi)-RE-(.+)-(\d+\.\d+\.\d+)-beta-(.+)\.bin$/;
 
-// PC/SBC appliance image filename: JuanFi-RE-<board>-<openwrt>-beta-<rel>.img.gz
+// PC/SBC appliance image filename: CVFi-RE-<board>-<openwrt>-beta-<rel>.img.gz
 // (whole-disk images written to SD/eMMC/disk, e.g. Raspberry Pi, x86-64, Orange Pi).
 // Same naming shape as the router .bin, different extension; the x86-64 EFI variant
 // is ...-<rel>-efi.img.gz and still parses board == 'x86-64'. These are download-only:
 // their board slugs are deliberately absent from the on-device cvfi_board_slug map, so
 // the router OTA picker never matches (and never tries to sysupgrade a whole-disk image).
-const APP_RE = /^JuanFi-RE-(.+)-(\d+\.\d+\.\d+)-beta-(.+)\.img\.gz$/;
+const APP_RE = /^(?:CVFi|JuanFi)-RE-(.+)-(\d+\.\d+\.\d+)-beta-(.+)\.img\.gz$/;
 
 // ESP8266 node images are versioned independently from the router release. Every
 // release carries both the application firmware and its required LittleFS image.
-const NODE_RE = /^JuanFi-RE-ESP8266-node-(firmware|littlefs)-(v[^/]+)\.bin$/;
+const NODE_RE = /^(?:CVFi|JuanFi)-RE-ESP8266-node-(firmware|littlefs)-(v[^/]+)\.bin$/;
 
 // Per-device presentation metadata (display name, product photo, optional warning
 // note), keyed by the board slug parsed out of the image filename above. Emitted both
