@@ -17,7 +17,7 @@ node** firmware.
 |---|---|---|
 | Router images — all supported router and access-point profiles below | `CVFi-RE-*-beta-0.4.64.bin` | **beta 0.4.64** |
 | PC / SBC appliance images — Raspberry Pi, x86‑64, and Orange Pi | `CVFi-RE-*-beta-0.4.64*.img.gz` | **beta 0.4.64** |
-| ESP8266 node — firmware + LittleFS UI | Available from the beta 0.4.61 release | **v0.4** _(unchanged)_ |
+| ESP8266 node — firmware + LittleFS UI | `CVFi-RE-ESP8266-node-{firmware,littlefs}-v0.4.bin` | **v0.4** |
 
 > **What's new in beta 0.4.64?** See [`CHANGELOG.md`](CHANGELOG.md): improved
 > memory efficiency, overall system stability, and general usability.
