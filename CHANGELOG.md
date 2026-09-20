@@ -3,6 +3,34 @@
 All notable changes to the CVFi‑RE flashable releases are documented here.
 Entries from before the rename keep the name they were published under.
 
+## stable 0.5.0 — 2026-09-20
+
+**New name.** JuanFi Reloaded is now **CVFi Reloaded**. The customer portal, the
+admin console and the coin-node pages all carry the new name and artwork. Your own
+branding is untouched — a shop name or logo you set stays exactly as you left it.
+
+**Remote access on every device.** Reach the admin console from anywhere, included
+on all tiers at no cost.
+
+**Walled garden.** Choose the sites clients may open before they buy time, from the
+Network page.
+
+**Copy a setup between vendos.** Export one device's settings and import them onto
+another to clone a configuration instead of redoing it by hand.
+
+**Remote Management.** Restyled to match the rest of the console, with clearer
+cards and controls.
+
+**Fixes.** Per-client speed limits stay applied after a reboot. Sessions now carry
+through correctly when a client's device rotates its network address. Router Pro is
+restored after a clean flash. Coin sound uploads work on the router. The admin and
+portal pages reliably load their newest files after an update instead of keeping
+stale ones.
+
+**Updating from an older release.** Existing devices pick this up on their usual
+update check. If it does not appear there, install it once from the downloads page
+and in-product updates resume as normal afterwards.
+
 ## beta 0.4.65 — 2026-09-19
 
 **PPPoE.** Improved server configuration, VLAN setup, status reporting, and
