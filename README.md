@@ -9,19 +9,14 @@ node** firmware.
 > only the release notes and checksums — the binaries are attached as release
 > assets.
 
-> **This project was renamed to CVFi Reloaded.** Images up to **beta 0.4.64**
-> are still named `JuanFi-RE-…` and ship the SSID `JuanFi Reloaded`; later
-> images use the new name. Updating in place keeps your existing Wi‑Fi settings,
-> so only a fresh install picks up the new default SSID.
-
 ---
 
 ## What's in the current release
 
 | Component | Files | Version |
 |---|---|---|
-| Router images — all supported router and access-point profiles below | `JuanFi-RE-*-beta-0.4.64.bin` | **beta 0.4.64** |
-| PC / SBC appliance images — Raspberry Pi, x86‑64, and Orange Pi | `JuanFi-RE-*-beta-0.4.64*.img.gz` | **beta 0.4.64** |
+| Router images — all supported router and access-point profiles below | `CVFi-RE-*-beta-0.4.64.bin` | **beta 0.4.64** |
+| PC / SBC appliance images — Raspberry Pi, x86‑64, and Orange Pi | `CVFi-RE-*-beta-0.4.64*.img.gz` | **beta 0.4.64** |
 | ESP8266 node — firmware + LittleFS UI | Available from the beta 0.4.61 release | **v0.4** _(unchanged)_ |
 
 > **What's new in beta 0.4.64?** See [`CHANGELOG.md`](CHANGELOG.md): improved
@@ -52,7 +47,7 @@ encrypted app blob.
 |---|---|---|
 | Comfast **CF‑N5 v2** | `ramips/mt7621` · `zbtlink_zbt-wg3526-16m` | Not a mainline OpenWrt board; built on the ZBT **WG3526 (16 MB)** profile, which matches the CF‑N5's actual radios — **MT7603E (2.4 GHz) + MT7612E (5 GHz)** — so both bands work. |
 | **ZBT WG3526** (16 MB) | `ramips/mt7621` · `zbtlink_zbt-wg3526-16m` | **Officially supported** by OpenWrt (MT7621, 16 MB flash, MT7603+MT7612 radios). This is the native device for the profile the CF‑N5 v2 borrows, so the image is identical — use this file on an actual WG3526. [Device page](https://openwrt.org/toh/zbtlink/zbt_wg3526). |
-| **AIRPHO AR‑W410** | `ramips/mt7621` · `zbtlink_zbt-wg3526-16m` | ZBT **WG3526 (16 MB)** clone — same MT7621 SoC and MT7603E (2.4 GHz) + MT7612E (5 GHz) radios. Ships as its own `JuanFi-RE-airpho-ar-w410-…​.bin` download, which is a **byte‑identical copy** of the ZBT WG3526 image. It reports the ZBT board name, so **in‑product updates track the ZBT WG3526 asset** (same image). |
+| **AIRPHO AR‑W410** | `ramips/mt7621` · `zbtlink_zbt-wg3526-16m` | ZBT **WG3526 (16 MB)** clone — same MT7621 SoC and MT7603E (2.4 GHz) + MT7612E (5 GHz) radios. Ships as its own `CVFi-RE-airpho-ar-w410-…​.bin` download, which is a **byte‑identical copy** of the ZBT WG3526 image. It reports the ZBT board name, so **in‑product updates track the ZBT WG3526 asset** (same image). |
 | Ruijie **RG‑EW1200G PRO v1.1** | `ramips/mt7621` · `ruijie_rg-ew1200g-pro-v1.1` | **Officially supported** by OpenWrt (since 24.10.0) — a first‑class device profile. |
 | **Newifi D2** (D‑Team) | `ramips/mt7621` · `d-team_newifi-d2` | **Officially supported** by OpenWrt (MT7621, 32 MB flash / 512 MB RAM). [Device page](https://openwrt.org/toh/hwdata/d-team/d-team_newifi_d2). |
 | Linksys **EA8300** (AC2200) | `ipq40xx/generic` · `linksys_ea8300` | **Officially supported** by OpenWrt (Qualcomm **IPQ4019**, tri‑radio, NAND, dual‑partition). Provided in **two builds: OpenWrt 23.05.5 (recommended) and 24.10.3**. ⚠️ Upgrading this board to 24.10.x can fail to boot / sysupgrade ([openwrt#17979](https://github.com/openwrt/openwrt/issues/17979)) — prefer the **23.05.5** image. Our `.bin` is a **sysupgrade** image; first install from stock Linksys firmware uses the OpenWrt **factory** flow. [Device page](https://openwrt.org/toh/linksys/ea8300). |
@@ -67,7 +62,7 @@ Each image comes up ready to run as a PisoWiFi gateway:
 - **LAN `10.0.0.1/24`** — the common vendo gateway address; the portal and admin are
   served here.
 - **Wi‑Fi enabled on both bands** (2.4 GHz + 5 GHz), **open** (auth is the captive
-  portal, not a Wi‑Fi key), SSID **`JuanFi Reloaded`**.
+  portal, not a Wi‑Fi key), SSID **`CVFi Reloaded`**.
 - **Admin console** at **`http://10.0.0.1/admin/`** starts with a first-run setup
   screen. Choose the sole admin username and password.
 
@@ -112,10 +107,10 @@ boot the machine from that media.
 
 | Platform | File pattern | Boot media |
 |---|---|---|
-| **Raspberry Pi 3 / 4 / 5** | `JuanFi-RE-raspberry-pi-{3,4,5}-…​.img.gz` | microSD card |
-| **x86‑64 PC** — BIOS/Legacy | `JuanFi-RE-x86-64-…​.img.gz` | USB stick or internal SATA/NVMe disk |
-| **x86‑64 PC** — UEFI/EFI | `JuanFi-RE-x86-64-…​-efi.img.gz` | USB stick or internal SATA/NVMe disk |
-| **Orange Pi One / PC / Zero 3** | `JuanFi-RE-orange-pi-{one,pc,zero-3}-…​.img.gz` | microSD card |
+| **Raspberry Pi 3 / 4 / 5** | `CVFi-RE-raspberry-pi-{3,4,5}-…​.img.gz` | microSD card |
+| **x86‑64 PC** — BIOS/Legacy | `CVFi-RE-x86-64-…​.img.gz` | USB stick or internal SATA/NVMe disk |
+| **x86‑64 PC** — UEFI/EFI | `CVFi-RE-x86-64-…​-efi.img.gz` | USB stick or internal SATA/NVMe disk |
+| **Orange Pi One / PC / Zero 3** | `CVFi-RE-orange-pi-{one,pc,zero-3}-…​.img.gz` | microSD card |
 
 > **BIOS vs EFI (x86 only):** use the plain `x86-64` image if your PC boots in
 > Legacy/CSM mode, or the `x86-64-…-efi` image if it boots in UEFI mode. Modern
@@ -129,12 +124,12 @@ console needed for a headless box:
 
 - The **first wired Ethernet port becomes the internet uplink (WAN, DHCP client)** —
   plug it into your existing router/modem.
-- The **onboard Wi‑Fi becomes the hotspot** (LAN), open SSID **`JuanFi Reloaded`**,
+- The **onboard Wi‑Fi becomes the hotspot** (LAN), open SSID **`CVFi Reloaded`**,
   gateway **`10.0.0.1`**. Any extra Ethernet ports fold into the LAN bridge.
 - Admin console at **`http://10.0.0.1/admin/`** — complete the first-run admin setup.
 
 So the flow is: **write the image → plug WAN cable into the first Ethernet port →
-power on → join the `JuanFi Reloaded` Wi‑Fi → open `http://10.0.0.1/admin/`.**
+power on → join the `CVFi Reloaded` Wi‑Fi → open `http://10.0.0.1/admin/`.**
 
 > ⚠️ **x86 boards need onboard or USB Wi‑Fi** for the hotspot. A PC with no Wi‑Fi
 > radio will still boot and route, but won't broadcast a hotspot until you add a
@@ -175,7 +170,7 @@ directly — decompress it to a plain `.img` first.**
 
 > **`dd` (macOS / Linux CLI) alternative:**
 > ```sh
-> gunzip -c JuanFi-RE-x86-64-24.10.3-beta-….img.gz | sudo dd of=/dev/sdX bs=4M status=progress conv=fsync
+> gunzip -c CVFi-RE-x86-64-24.10.3-beta-….img.gz | sudo dd of=/dev/sdX bs=4M status=progress conv=fsync
 > ```
 > Replace `/dev/sdX` with your target device (`lsblk` / `diskutil list`). **Wrong
 > device = wiped disk** — check twice.
@@ -188,7 +183,7 @@ directly — decompress it to a plain `.img` first.**
   (via a USB‑to‑SATA adapter, or boot a live Linux USB and `dd` it), then boot from
   it normally.
 - The image comes up headless — you don't need a monitor. Once it boots, look for the
-  **`JuanFi Reloaded`** Wi‑Fi and browse to **`http://10.0.0.1/admin/`**.
+  **`CVFi Reloaded`** Wi‑Fi and browse to **`http://10.0.0.1/admin/`**.
 
 > The image's partition is small; OpenWrt uses an overlay for config/data, so there's
 > no need to pre‑expand it for normal use. Flash to media at least as large as the
@@ -222,9 +217,9 @@ layout, so the FS goes at **`0x300000`** (the FS bin is exactly `0xFA000` = 1,02
 
 ```sh
 # firmware (first bin) → 0x0
-esptool.py --port <PORT> --baud 460800 write_flash 0x0 JuanFi-RE-ESP8266-node-firmware-v0.3.bin
+esptool.py --port <PORT> --baud 460800 write_flash 0x0 CVFi-RE-ESP8266-node-firmware-v0.4.bin
 # LittleFS (second bin) → 0x300000  (NOT 0x200000 — that is the 2 MB-FS layout)
-esptool.py --port <PORT> --baud 460800 write_flash 0x300000 JuanFi-RE-ESP8266-node-littlefs-v0.3.bin
+esptool.py --port <PORT> --baud 460800 write_flash 0x300000 CVFi-RE-ESP8266-node-littlefs-v0.4.bin
 ```
 
 Or let PlatformIO place the FS for you: `pio run -e esp12e -t uploadfs`.
@@ -240,13 +235,13 @@ Or let PlatformIO place the FS for you: `pio run -e esp12e -t uploadfs`.
 1. **Serial port** ➊ — the node's COM port (**Reload** if empty; install the
    CP2102/CH340 USB‑serial driver first if none appears).
 2. **NodeMCU firmware** ➋ — Browse to the **firmware** bin
-   (`JuanFi-RE-ESP8266-node-firmware-v0.3.bin`).
+   (`CVFi-RE-ESP8266-node-firmware-v0.4.bin`).
 3. **Offset Address** ➌ — `0x000000` for the firmware.
 4. **Baud rate** ➍ `115200` · **Flash mode** ➎ `Dual I/O (DIO)` ·
    **Erase flash** ➏ `yes` on a first‑ever flash (else `no`).
 5. Click **Flash NodeMCU** ➐ and wait for success in the console.
 6. **Second pass:** load the **LittleFS** bin
-   (`JuanFi-RE-ESP8266-node-littlefs-v0.3.bin`) in ➋ with
+   (`CVFi-RE-ESP8266-node-littlefs-v0.4.bin`) in ➋ with
    **Offset Address ➌ = `0x300000`**, set Erase flash to `no`, and Flash again.
 
 > ⚠️ The LittleFS bin **must** go at `0x300000`, not `0x0`. On the first pass the

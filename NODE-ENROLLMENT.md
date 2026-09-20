@@ -6,15 +6,12 @@ it, joining your Wi‑Fi, linking the router, and **pairing**. Pairing is code�
 router shows a 6‑digit code, you type it on the node, and the node fetches its auth
 **token automatically** — you never copy/paste the token by hand.
 
-There are two consoles involved, don't mix them up. The titles below are what
-the currently published binaries show; images built after the rename to **CVFi
-Reloaded** show the new name in the same places.
-
+There are two consoles involved, don't mix them up:
 
 | Console | Where | Title |
 |---|---|---|
-| **Node** (the coin acceptor) | the node's setup Wi‑Fi at `http://192.168.4.1/` | **JUANFI NODE — Guided Setup** |
-| **Router** (the PisoWiFi) | `http://10.0.0.1/admin/` | **JUANFI RELOADED — PisoWiFi Console** |
+| **Node** (the coin acceptor) | the node's setup Wi‑Fi at `http://192.168.4.1/` | **CVFI NODE — Guided Setup** |
+| **Router** (the PisoWiFi) | `http://10.0.0.1/admin/` | **CVFI RELOADED — PisoWiFi Console** |
 
 ---
 
@@ -29,8 +26,8 @@ Reloaded** show the new name in the same places.
   (you'll see the normal Sign‑in page, not Setup). Full‑erase, then flash both images:
   ```sh
   esptool.py --port <PORT> erase_flash
-  esptool.py --port <PORT> --baud 460800 write_flash 0x0      JuanFi-RE-ESP8266-node-firmware-v0.3.bin
-  esptool.py --port <PORT> --baud 460800 write_flash 0x300000 JuanFi-RE-ESP8266-node-littlefs-v0.3.bin
+  esptool.py --port <PORT> --baud 460800 write_flash 0x0      CVFi-RE-ESP8266-node-firmware-v0.4.bin
+  esptool.py --port <PORT> --baud 460800 write_flash 0x300000 CVFi-RE-ESP8266-node-littlefs-v0.4.bin
   ```
 - The router is up and reachable at **`http://10.0.0.1/admin/`** (default login
   `admin` / `admin`).
@@ -67,7 +64,7 @@ continue**. It's stored only as a salted hash and gates the node's console from 
 
 ## Step 2 — Connect to the router
 
-**Wi‑Fi nodes:** tap **SCAN**, pick your router's SSID (e.g. **`JuanFi Reloaded`**) from
+**Wi‑Fi nodes:** tap **SCAN**, pick your router's SSID (e.g. **`CVFi Reloaded`**) from
 the list, enter its Wi‑Fi **password** (leave blank for an open hotspot), and tap
 **Connect**. The node joins as a station **without rebooting** and shows **Connected**
 once it's on — you're still on the setup Wi‑Fi the whole time.
