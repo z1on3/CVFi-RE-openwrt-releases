@@ -1,3 +1,24 @@
+a5723c5f1ce260cfb79f5a52c390adcdf5383086ab04ffbaf946bc233051c11e  CVFi-RE-airpho-ar-w410-24.10.3-stable-0.5.0.bin
+2099e3234a0a130323f6420ae235943e90e1a1872bee42b96a6a1cea2ae632f5  CVFi-RE-asus-rt-ac68u-24.10.5-stable-0.5.0.bin
+80b044b4835b99b1977d2a9fa8ed361e206730b621874007ed299c9c6c84f242  CVFi-RE-asus-rt-ax52-25.12.0-stable-0.5.0.bin
+b596f70ec5ce5d11d5b9a2576e89542f1c71683010cbaad1a4526351b584d46c  CVFi-RE-comfast-cf-ew71-v2-25.12.2-stable-0.5.0.bin
+7eed2befd8f4cda8422da828053ed16fff4d363e59e83f8ff712f40c837235e9  CVFi-RE-comfast-cf-ew72-v2-25.12.5-stable-0.5.0.bin
+a5723c5f1ce260cfb79f5a52c390adcdf5383086ab04ffbaf946bc233051c11e  CVFi-RE-comfast-cf-n5-v2-24.10.3-stable-0.5.0.bin
+5acd49d6e9fe327f68db94ccb2ca9a4ee015d19ae3f5676a2fac13db8323aae4  CVFi-RE-eap225-outdoor-v1-24.10.3-stable-0.5.0.bin
+3aeaad8e932fffd7e256ae6ab6509526eeb4517d9732c51a8e67c9104e9583b6  CVFi-RE-eap225-outdoor-v3-24.10.3-stable-0.5.0.bin
+516aa5d3162013d9ff8dbf2f756bc214f55493d67158b0cb9d5a7d05d5e90202  CVFi-RE-eap225-v1-24.10.3-stable-0.5.0.bin
+b61793c4ce4f04637f203cf7cec2d1d48d0d7b1375786ff3a315f32ad11687f5  CVFi-RE-eap225-v3-24.10.3-stable-0.5.0.bin
+25e67b09c181b918ed6d58ff8e661c3b887a3c0a1278eb137fa613a745bda101  CVFi-RE-eap225-v4-24.10.3-stable-0.5.0.bin
+982ced98445dc43bb189fb8f4fed10c55ee15efc5d667c58cf1965f26cf658ed  CVFi-RE-eap225-wall-v2-24.10.3-stable-0.5.0.bin
+49bf81eaa778ad450bb5b27bd4136ec1418974d1093da632a429f61a3caec24e  CVFi-RE-edup-ep-rt2983-25.12.4-stable-0.5.0.bin
+d36b0d32700e07be98cc0e94a253cdecd4678687f3132cd55e0a4b2a4094d1e3  CVFi-RE-linksys-ea8300-23.05.5-stable-0.5.0.bin
+98b2854ba97b911f7fda5d7c1957dbfae379ceca7535e41b06003a88b1783ec4  CVFi-RE-linksys-ea8300-24.10.3-stable-0.5.0.bin
+71f8c91a6d37b5d06e9b1f71912af280d3b0c001fda561e2e5c6f182475e3b55  CVFi-RE-linksys-wrt1900acs-24.10.3-stable-0.5.0.bin
+14e059920286ceea5a6ff29c5b00d1c7fb61bd5943a91846a8e1307c32583962  CVFi-RE-mercusys-mr70x-v1-25.12.5-stable-0.5.0.bin
+902b5d81a5ba370128acef9a4be6cf6d50ea02d0c1d6939c4b3ba120acbd7d5f  CVFi-RE-newifi-d2-24.10.3-stable-0.5.0.bin
+bd3fbd2e2c0014cce31e1f95484eaa5f5d2f59bc324a78e45e20121502a3ddb8  CVFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-stable-0.5.0.bin
+3c0da4d801f429d7e35ff0a50344eee0a695fb2349e9d630d05ecabdcc56266d  CVFi-RE-ruijie-rg-ew3200gx-pro-24.10.5-stable-0.5.0.bin
+a5723c5f1ce260cfb79f5a52c390adcdf5383086ab04ffbaf946bc233051c11e  CVFi-RE-zbt-wg3526-16m-24.10.3-stable-0.5.0.bin
 5ba35619e6a1ee8662476fba7abbb9761bb6672975d386642c6416ea2857202c  JuanFi-RE-airpho-ar-w410-24.10.3-beta-0.4.61.bin
 9ec1a537fb58129cc5080441e2e3a9c6ad013bf1f5e9affb39588e1d709f95f6  JuanFi-RE-airpho-ar-w410-24.10.3-beta-0.4.62.bin
 26ecfddf4d7c6a7c53691884e41dc59bdc08a5b5a80fc372adb0cb91e0532c39  JuanFi-RE-airpho-ar-w410-24.10.3-beta-0.4.63.bin
@@ -213,6 +234,7 @@ ed7af56f8d3233860bebc684ee14bf39a0ebaf6dac43d1f95420a69cb9112e51  JuanFi-RE-edup
 fed1befe2e535d81930e91de3f511a56d0e97c990baa21a0e5ba1f1a55862335  JuanFi-RE-edup-ep-rt2983-25.12.4-beta-0.4.63.bin
 98468d7a270e818ca0326e987d19fa8743f807a1ecc360364fbc7e9326710465  JuanFi-RE-edup-ep-rt2983-25.12.4-beta-0.4.64.bin
 b9217cb1de32db4a7cf862dc8d60243ebf482cb01973b3e1be1bfd3a5a4db55e  JuanFi-RE-edup-ep-rt2983-25.12.4-beta-0.4.65.bin
+00ee63f548181ea4fd02ca42a236bba153cbd6100c185601ae89e704344d6982  JuanFi-RE-linksys-ea8300-23.05.5-0.4.66c-unreleased.bin
 dfae6b4bb18d1b75d6fa279b8418e6ec5447dc688831c292f733a0191057d18f  JuanFi-RE-linksys-ea8300-23.05.5-beta-0.3.5.bin
 0b2b9f85b6d879c38da8aba1aafd196980ce9d91e3740e84bc19d7fdbea34075  JuanFi-RE-linksys-ea8300-23.05.5-beta-0.3.6.bin
 c9a9460bad36d32cd12b1f99f5cbdf7d9392ce6ca5387dabe683fa24c94d2d87  JuanFi-RE-linksys-ea8300-23.05.5-beta-0.4.0.bin
@@ -232,6 +254,8 @@ ffd53296b787951e8cf131adb129cd72682dc4fd3f329227e89a97e6ad0d5f6a  JuanFi-RE-link
 3b54c79c086b0e69d130c67d32d53c7f29d98f8b25718034c1f0e2dc766c0f7f  JuanFi-RE-linksys-ea8300-23.05.5-beta-0.4.63.bin
 e989b4a5ddd59f3a98da624924ecc31affeb24dfc82a74e4fb80a3f250833bca  JuanFi-RE-linksys-ea8300-23.05.5-beta-0.4.64.bin
 b16787753c6e768abdcaa8857f7aeff711af61d59aa897a0b9827788b831a955  JuanFi-RE-linksys-ea8300-23.05.5-beta-0.4.65.bin
+39b31c14040fc0243262c47cca6bdde0d9d8a435e25c84428afa7258ad71cc11  JuanFi-RE-linksys-ea8300-23.05.5-beta-0.4.66.bin
+67b216583dece2651cb737c92f1ac534f3d2b85d8f70d720099748a4f979e2c4  JuanFi-RE-linksys-ea8300-24.10.3-0.4.66c-unreleased.bin
 feaee4c2b50f1fd060ecc42cbc1a5fede096f935b7f6b21322e312172e7b0752  JuanFi-RE-linksys-ea8300-24.10.3-beta-0.3.5.bin
 4af93358b09abb98c17b0827f295a472ec25c14bfbdddae79d931585b61871a8  JuanFi-RE-linksys-ea8300-24.10.3-beta-0.3.6.bin
 b6f37ca8005a288fed2eff32f4d226c35d23341e9f45f94757c6f74a33865b67  JuanFi-RE-linksys-ea8300-24.10.3-beta-0.4.0.bin
@@ -289,6 +313,8 @@ dee2cfd09c37da68859800e67f35b0b7d00ed0c132c5cb9beb02cce0d03d0771  JuanFi-RE-merc
 90230aba791c05bd77b511aab5bb0e0c4f6d3825304f779132c1a49b0be31287  JuanFi-RE-mercusys-mr70x-v1-25.12.5-beta-0.4.65.bin
 1e4c647184b89e08911ea077288beb7214256cb708726123197d1ab8e4daa36d  JuanFi-RE-newifi-d2-24.10.3-0.4.63a-unreleased.bin
 ed4603131974705d1cc1c2df104dbc9e1aa57985e7befa5270ef72c20ec832af  JuanFi-RE-newifi-d2-24.10.3-0.4.63b-unreleased.bin
+7ea23a559db8bfa1a361ced522c5e610ce8e3afb40775b6678a52bc7fde83e66  JuanFi-RE-newifi-d2-24.10.3-0.4.66c-unreleased.bin
+8b5f799281d6a29b93c34caa96b0e03395681e250629ee3a92b4006e4363dcc2  JuanFi-RE-newifi-d2-24.10.3-0.4.66-unreleased.bin
 04b8c7dff2da72c67d9c40c435ed352bb06810d5942b1a2955d587940b98ecba  JuanFi-RE-newifi-d2-24.10.3-beta-0.3.5.bin
 71fb5d143513cd5ee7719aea1e69efc0b6b3c9d4d9f8e9d587ff0e4c63cabebf  JuanFi-RE-newifi-d2-24.10.3-beta-0.3.6.bin
 374ceb5006d2a28071ffc51835dbafa6a5bffabee1b68bd3fb413436c1cde5d7  JuanFi-RE-newifi-d2-24.10.3-beta-0.4.0.bin
@@ -313,6 +339,8 @@ a94a7d19bcc4445a2cdb284c58bf71c663cb0b803aacff4095190fef22f9ce1e  JuanFi-RE-newi
 69ba13b0b081cc1b69c3a96c9d32166d7a6a78cd12a4c0abbc76874aba737966  JuanFi-RE-newifi-d2-24.10.3-beta-0.4.64.bin
 32ca48e861f996822e61ea8f619a7e8f111d3cb80354a2763edec29a2f2a96d1  JuanFi-RE-newifi-d2-24.10.3-beta-0.4.65.bin
 46d892763f9727a570becd22977ebcbdce6c7363888083ef30dc07b64cefc2bd  JuanFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-0.4.63a-unreleased.bin
+812a7e97a5be1a4d428536fe08d05e7203b5d1007ff6167e9ee6830e5e9df301  JuanFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-0.4.66c-unreleased.bin
+87ca01964c42394ac012167099cdd51ee6abbb03320f942cac67f45f4a8c0501  JuanFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-0.4.66-unreleased.bin
 b05680f91c34c5e6f38f59a1c5f70f83120cbe5517da542554312841e0bf2e00  JuanFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-beta-0.3.5.bin
 3b6e975536b994cd262c8656ac3bb3f5affe1401a5d987851f67e204150af227  JuanFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-beta-0.3.6.bin
 7010590938a325b97be86501948b7e281b2c095bd296021873ed874f22c6b296  JuanFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-beta-0.4.0.bin
@@ -332,6 +360,7 @@ d910e7c341942ea1ee0b92df867c34d71726e97c2952eec74e09aa32be89786a  JuanFi-RE-ruij
 69bff59d7e04b7187ffd5d1b0c4c523e745304b8f2f148465bed359d235f5f58  JuanFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-beta-0.4.63.bin
 a414b5f15f8a15db2f87a861e1794d789188c75247e19635f16efc7ffc6f7e1b  JuanFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-beta-0.4.64.bin
 53d51492aec4fc5662a756dbbd1cc803b1c1f46947a9e37ee94cd774d5564d8d  JuanFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-beta-0.4.65.bin
+0ca2fa41b060b74554484105acda2ab661b06f761209d4f7416580f21a59bf98  JuanFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-beta-0.4.66.bin
 f2d6927225583f1312006bf198ba3d3dbae3456b10a145c8f0417e8658ef8b4c  JuanFi-RE-ruijie-rg-ew3200gx-pro-24.10.5-beta-0.4.0.bin
 550a81766a7bcae191c77c14ea6bc1a6434c03f0857c580f38b6db038869487f  JuanFi-RE-ruijie-rg-ew3200gx-pro-24.10.5-beta-0.4.1.bin
 74d575f36d214b486264cb9dd06e62618651503d357246e79f3dd36a688af2d2  JuanFi-RE-ruijie-rg-ew3200gx-pro-24.10.5-beta-0.4.2.bin

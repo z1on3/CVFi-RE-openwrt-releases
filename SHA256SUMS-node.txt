@@ -1,2 +1,2 @@
-a7c997b49cd136901459927aad5e409220ca07ad7eba75e57ff155ce8c82f6aa  JuanFi-RE-ESP8266-node-firmware-v0.4.bin
-c7b358206b58abcc189c4f531170b3393fc3ad7c53164c630b9ce12dfcf0245b  JuanFi-RE-ESP8266-node-littlefs-v0.4.bin
+cda652a35aa21c92fac75a49f2ccee3ea448a9562f6390a5f2ca5c3cb3322e45  CVFi-RE-ESP8266-node-firmware-v0.5.bin
+04b3eae34102acd860a1288c54b8461d70f62a01d93e08dd6cf28d9145cae4d3  CVFi-RE-ESP8266-node-littlefs-v0.5.bin
