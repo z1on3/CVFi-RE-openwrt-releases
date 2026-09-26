@@ -3,6 +3,42 @@
 All notable changes to the CVFi‑RE flashable releases are documented here.
 Entries from before the rename keep the name they were published under.
 
+## preview 0.5.1 — 2026-09-26
+
+**Preview build.** An early look at the next release, published for testing. Flash
+it on a device you can recover, and expect rough edges.
+
+**Points packages can expire.** Set an expiry on a points package so credit bought
+today does not sit on the books forever. Optional — leave it unset and packages
+behave exactly as before.
+
+**Clearer answers when Pro or a node is refused.** Router Pro activation and node
+enrollment now say what actually went wrong and point at the fix, and stop offering
+a repair when there is nothing to repair. A recovered activation no longer uses up
+an unspent key, and a router whose cloud identity has drifted can repair itself from
+the console.
+
+**Coin handling.** A coin session is refused up front when the machine cannot take
+money, and the wiring check can now find a mis-wired pin instead of simply reporting
+nothing. The coin reader, swap and LAN bridge on the PC/SBC images were repaired.
+
+**Admin console.** Sign in with the system root account, and the portal preview now
+renders over remote access.
+
+**Faster and lighter.** Lower idle CPU use, a quicker customer portal, and per-client
+speed limits applied in one step.
+
+**Customer portal.** The Rates list drops a duplicate coin figure and no longer shows
+a machine name customers cannot act on.
+
+**Fixes.** PPPoE connections size their traffic correctly, scheduled jobs are restored
+on every boot, pages load their newest files after an update, and the system log is
+no longer flooded by the update checker.
+
+**Updating from an older release.** Existing devices pick this up on their usual
+update check. If it does not appear there, install it once from the downloads page
+and in-product updates resume as normal afterwards.
+
 ## stable 0.5.0 — 2026-09-20
 
 **New name.** JuanFi Reloaded is now **CVFi Reloaded**. The customer portal, the
