@@ -21,7 +21,7 @@ const gh = (args) => execFileSync('gh', args, { encoding: 'utf8', maxBuffer: 64 
 
 // Release channels, longest-suffix-first so a longer name can never be shadowed
 // by a shorter one that happens to be its tail.
-const CHANNELS = ['stable', 'beta'];
+const CHANNELS = ['preview', 'stable', 'beta'];
 
 // Fallback caveat per channel, shown by a download page on a device card that has
 // no caveat of its own. Editable as data in disclaimers.json so the wording can
@@ -29,6 +29,7 @@ const CHANNELS = ['stable', 'beta'];
 // are only a safety net if that file is missing or unreadable.
 const DISCLAIMERS = (() => {
   const builtin = {
+    preview: "⚠ Preview — an early build for testing. Flash at your own risk; we're not responsible for any damage to your device.",
     beta: "⚠ Beta — flash at your own risk. We're not responsible for any damage to your device.",
     stable: "⚠ Flash at your own risk. We're not responsible for any damage to your device.",
     default: "⚠ Flash at your own risk. We're not responsible for any damage to your device.",
@@ -53,7 +54,7 @@ const DISCLAIMERS = (() => {
 // forms must keep parsing: the picker offers older releases for reinstall/downgrade,
 // and an asset that fails to parse here is simply absent from releases.json — which
 // reads on-device as "no compatible image", not as an error anyone would notice.
-const IMG_RE = /^(?:CVFi|JuanFi)-RE-(.+)-(\d+\.\d+\.\d+)-(?:beta|stable)-(.+)\.bin$/;
+const IMG_RE = /^(?:CVFi|JuanFi)-RE-(.+)-(\d+\.\d+\.\d+)-(?:beta|stable|preview)-(.+)\.bin$/;
 
 // PC/SBC appliance image filename: CVFi-RE-<board>-<openwrt>-beta-<rel>.img.gz
 // (whole-disk images written to SD/eMMC/disk, e.g. Raspberry Pi, x86-64, Orange Pi).
@@ -61,7 +62,7 @@ const IMG_RE = /^(?:CVFi|JuanFi)-RE-(.+)-(\d+\.\d+\.\d+)-(?:beta|stable)-(.+)\.b
 // is ...-<rel>-efi.img.gz and still parses board == 'x86-64'. These are download-only:
 // their board slugs are deliberately absent from the on-device cvfi_board_slug map, so
 // the router OTA picker never matches (and never tries to sysupgrade a whole-disk image).
-const APP_RE = /^(?:CVFi|JuanFi)-RE-(.+)-(\d+\.\d+\.\d+)-(?:beta|stable)-(.+)\.img\.gz$/;
+const APP_RE = /^(?:CVFi|JuanFi)-RE-(.+)-(\d+\.\d+\.\d+)-(?:beta|stable|preview)-(.+)\.img\.gz$/;
 
 // ESP8266 node images are versioned independently from the router release. Every
 // release carries both the application firmware and its required LittleFS image.

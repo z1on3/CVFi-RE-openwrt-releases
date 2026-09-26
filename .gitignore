@@ -17,3 +17,6 @@ payload-*/
 
 # Private manifest-signing keys are deliberately offline-only.
 keys/
+
+# Local archives of older node builds are kept beside the release assets.
+*.7z

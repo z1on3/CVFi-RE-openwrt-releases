@@ -1,5 +1,6 @@
 {
   "_comment": "Fallback caveat shown on a download card when the device has no caveat of its own. Keyed by release channel, which is taken from the tag suffix (v0.5.0-stable -> stable). Edit the text here and re-run the 'Update releases.json' workflow; consumers read it from releases.json rather than hardcoding it. 'default' covers a tag with no recognised channel suffix.",
+  "preview": "⚠ Preview — an early build for testing. Flash at your own risk; we're not responsible for any damage to your device.",
   "beta": "⚠ Beta — flash at your own risk. We're not responsible for any damage to your device.",
   "stable": "⚠ Flash at your own risk. We're not responsible for any damage to your device.",
   "default": "⚠ Flash at your own risk. We're not responsible for any damage to your device."
