@@ -1,6 +1,221 @@
 {
-  "latest": "0.5.0-stable",
+  "latest": "0.5.1-preview",
   "releases": [
+    {
+      "version": "0.5.1-preview",
+      "tag": "v0.5.1-preview",
+      "channel": "preview",
+      "disclaimer": "⚠ Preview — an early build for testing. Flash at your own risk; we're not responsible for any damage to your device.",
+      "date": "2026-09-26",
+      "notes": "CVFi-RE preview 0.5.1",
+      "assets": [
+        {
+          "board": "airpho-ar-w410",
+          "name": "AIRPHO AR-W410",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-airpho-ar-w410-24.10.3-preview-0.5.1.bin",
+          "sha256": "07cea8de729099e8d0045095ebad89e0c114abbda4ed1ba93280b34cf2ccd625",
+          "image": "",
+          "note": "ZBT WG3526 (16M) clone — identical image to the ZBT WG3526; in-product updates track the ZBT WG3526 asset."
+        },
+        {
+          "board": "comfast-cf-ew72-v2",
+          "name": "Comfast CF-EW72 v2",
+          "openwrt": "25.12.5",
+          "file": "CVFi-RE-comfast-cf-ew72-v2-25.12.5-preview-0.5.1.bin",
+          "sha256": "077e9947efaeb1e59c177ae90c0fed27c24d07a29e70959e55b89a817d1a8b52",
+          "image": "https://comfastgroup.com/wp-content/uploads/2024/09/cf-ew72-v2.webp",
+          "note": ""
+        },
+        {
+          "board": "asus-rt-ac68u",
+          "name": "ASUS RT-AC68U",
+          "openwrt": "24.10.5",
+          "file": "CVFi-RE-asus-rt-ac68u-24.10.5-preview-0.5.1.bin",
+          "sha256": "e5430bd4dc4f1ae0b958c14e269abb5c84e5b1712f08fbbb3c309e6e95a976b2",
+          "image": "https://dlcdnwebimgs.asus.com/gain/6670e848-ba84-47e0-97d5-fd076ac3a137/w185",
+          "note": "⚠ Wi-Fi unsupported on this Broadcom board in OpenWrt — routes over Ethernet only and cannot serve its own hotspot. Use it wired or paired with an external AP node. First flash from stock ASUS uses the .trx (this image is that .trx under a .bin name)."
+        },
+        {
+          "board": "asus-rt-ax52",
+          "name": "ASUS RT-AX52",
+          "openwrt": "25.12.0",
+          "file": "CVFi-RE-asus-rt-ax52-25.12.0-preview-0.5.1.bin",
+          "sha256": "3f13a89b1b8714a1b9cb1a4344a7f5904da620d2b0dbc2ee23c0f668eb6ac20e",
+          "image": "https://image.alza.cz/products/Asus23_022/Asus23_022-01.jpg",
+          "note": ""
+        },
+        {
+          "board": "comfast-cf-ew71-v2",
+          "name": "Comfast CF-EW71 v2",
+          "openwrt": "25.12.2",
+          "file": "CVFi-RE-comfast-cf-ew71-v2-25.12.2-preview-0.5.1.bin",
+          "sha256": "d50bab0cfa97688632313490728a06f61815be96c4dbc149c505e750a48a6f6d",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "comfast-cf-n5-v2",
+          "name": "Comfast CF-N5 v2",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-comfast-cf-n5-v2-24.10.3-preview-0.5.1.bin",
+          "sha256": "f2b6a05031bb20589d943aab7db12bff71c2a086beb2f884baf69bba52350dff",
+          "image": "https://comfastgroup.com/wp-content/uploads/2024/09/cf-n5-v2.webp",
+          "note": ""
+        },
+        {
+          "board": "eap225-outdoor-v1",
+          "name": "TP-Link EAP225-Outdoor v1",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-eap225-outdoor-v1-24.10.3-preview-0.5.1.bin",
+          "sha256": "291dea28c754f55c88809d8602bf2fe2cc12d431cb338e991642178c9ae9df6c",
+          "image": "",
+          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
+        },
+        {
+          "board": "eap225-outdoor-v3",
+          "name": "TP-Link EAP225-Outdoor v3",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-eap225-outdoor-v3-24.10.3-preview-0.5.1.bin",
+          "sha256": "521cdb8e813daaac63a0eabd96f38d3c238e814dff8536a61ebc34935dcaaa5d",
+          "image": "",
+          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
+        },
+        {
+          "board": "eap225-v1",
+          "name": "TP-Link EAP225 v1",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-eap225-v1-24.10.3-preview-0.5.1.bin",
+          "sha256": "eb7b0ba7f091f6c09c73058fffe0b353a13084002492443183abd6341e850ba7",
+          "image": "",
+          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
+        },
+        {
+          "board": "eap225-v3",
+          "name": "TP-Link EAP225 v3",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-eap225-v3-24.10.3-preview-0.5.1.bin",
+          "sha256": "56793affa607090e415ea1076a5d6da41f9d740d0472d1dbaaf510ad68b2c5a5",
+          "image": "",
+          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
+        },
+        {
+          "board": "eap225-v4",
+          "name": "TP-Link EAP225 v4",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-eap225-v4-24.10.3-preview-0.5.1.bin",
+          "sha256": "c894cccd43438f039b5cbfc801079977127e5bcdd15d52d8213af7f98acb445c",
+          "image": "",
+          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
+        },
+        {
+          "board": "eap225-wall-v2",
+          "name": "TP-Link EAP225-Wall v2",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-eap225-wall-v2-24.10.3-preview-0.5.1.bin",
+          "sha256": "2ee9d6b2145753e554aa49517b1bd70973d03f567635b4e32116d04a0a04d82b",
+          "image": "",
+          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
+        },
+        {
+          "board": "edup-ep-rt2983",
+          "name": "EDUP EP-RT2983",
+          "openwrt": "25.12.4",
+          "file": "CVFi-RE-edup-ep-rt2983-25.12.4-preview-0.5.1.bin",
+          "sha256": "17a14f31e88801c5784a30f760bfc4ed88cca8cb99644d4eea822b63b46be62c",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "linksys-ea8300",
+          "name": "Linksys EA8300",
+          "openwrt": "23.05.5",
+          "file": "CVFi-RE-linksys-ea8300-23.05.5-preview-0.5.1.bin",
+          "sha256": "e0316dc84e72eb71a09aa5e41699639113849fa57a6ba9ec353889558ed227c4",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "linksys-ea8300",
+          "name": "Linksys EA8300",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-linksys-ea8300-24.10.3-preview-0.5.1.bin",
+          "sha256": "7c911625a0d0fb198dcd0af91a690d86d1c6d8e01e869285155ffec81c7ad06e",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "linksys-wrt1900acs",
+          "name": "Linksys WRT1900ACS",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-linksys-wrt1900acs-24.10.3-preview-0.5.1.bin",
+          "sha256": "273f9dce40e12c8d226c3b4eb3ad8d972ceb365463fecebe3f5c8619d0d90b40",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "mercusys-mr70x-v1",
+          "name": "Mercusys MR70X v1",
+          "openwrt": "25.12.5",
+          "file": "CVFi-RE-mercusys-mr70x-v1-25.12.5-preview-0.5.1.bin",
+          "sha256": "1d9603e66561ae59773bbc0e9ec5d086713c8fd98f2182ac53ce7bac9ced44b2",
+          "image": "https://static.mercusys.com/product-image/01_large20201223072930.jpg",
+          "note": ""
+        },
+        {
+          "board": "newifi-d2",
+          "name": "Newifi D2",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-newifi-d2-24.10.3-preview-0.5.1.bin",
+          "sha256": "a6c676bfff0607432bbb51dd1fcc8cd01ed92f794a229c204e298073b8bf1d64",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "ruijie-rg-ew1200g-pro-v1.1",
+          "name": "Ruijie RG-EW1200G PRO v1.1",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-preview-0.5.1.bin",
+          "sha256": "4a49f92d9b5a4ad87256155951405391d72d1430970bb834ceac86aa4c237b74",
+          "image": "https://eo-sgp-cos.ruijie.com/background/other/2023-10-27/7b9d778c2293490a993760bc68f52396.png",
+          "note": ""
+        },
+        {
+          "board": "ruijie-rg-ew3200gx-pro",
+          "name": "Ruijie RG-EW3200GX PRO",
+          "openwrt": "24.10.5",
+          "file": "CVFi-RE-ruijie-rg-ew3200gx-pro-24.10.5-preview-0.5.1.bin",
+          "sha256": "33f9d83525d2405963244d0a6e5015e8e5297753fea6acb8772f6f599ae3a048",
+          "image": "https://eo-sgp-cos.ruijie.com/background/other/2023-10-30/b2b529094b4d432fa998eba11a445b19.png",
+          "note": ""
+        },
+        {
+          "board": "zbt-wg3526-16m",
+          "name": "ZBT WG3526 (16M)",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-zbt-wg3526-16m-24.10.3-preview-0.5.1.bin",
+          "sha256": "07cea8de729099e8d0045095ebad89e0c114abbda4ed1ba93280b34cf2ccd625",
+          "image": "",
+          "note": ""
+        }
+      ],
+      "node_assets": [
+        {
+          "type": "firmware",
+          "name": "ESP8266 Node Firmware",
+          "version": "v0.5",
+          "file": "CVFi-RE-ESP8266-node-firmware-v0.5.bin",
+          "sha256": "cda652a35aa21c92fac75a49f2ccee3ea448a9562f6390a5f2ca5c3cb3322e45"
+        },
+        {
+          "type": "littlefs",
+          "name": "ESP8266 Node LittleFS",
+          "version": "v0.5",
+          "file": "CVFi-RE-ESP8266-node-littlefs-v0.5.bin",
+          "sha256": "04b3eae34102acd860a1288c54b8461d70f62a01d93e08dd6cf28d9145cae4d3"
+        }
+      ]
+    },
     {
       "version": "0.5.0-stable",
       "tag": "v0.5.0-stable",
