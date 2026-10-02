@@ -188,6 +188,69 @@
           "sha256": "ad290b72d072ade3a87dee9c5678c7dd669975b20a1f8704309cd0ddf139b88e",
           "image": "https://eo-sgp-cos.ruijie.com/background/other/2023-10-30/b2b529094b4d432fa998eba11a445b19.png",
           "note": ""
+        },
+        {
+          "board": "zbt-wg3526-16m",
+          "name": "ZBT WG3526 (16M)",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-zbt-wg3526-16m-24.10.3-preview-0.5.13.bin",
+          "sha256": "b99e26c4e6ffab7516aa479adca13bca1ceb348d5c34fce81c66828075f79f01",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "orange-pi-one",
+          "name": "Orange Pi One",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-orange-pi-one-24.10.3-preview-0.5.13.img.gz",
+          "sha256": "60eebd97f8e73e6fbaa3b529aac1d7aa84d3f7d74884d313c422d9a6a6e4588c",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Top_view_of_an_Orange_Pi_One_single-board_computer.jpg",
+          "note": ""
+        },
+        {
+          "board": "orange-pi-pc",
+          "name": "Orange Pi PC",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-orange-pi-pc-24.10.3-preview-0.5.13.img.gz",
+          "sha256": "17a38c26b0f3471f8bbc5c0c61ed95beac6b6894218acd04ebfc3c57b47b3c95",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "orange-pi-zero-3",
+          "name": "Orange Pi Zero 3",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-orange-pi-zero-3-24.10.3-preview-0.5.13.img.gz",
+          "sha256": "65a68cce6984eb2d69f4ceda3f2b86517b0fa18900498b379617dbdb8e06d500",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "raspberry-pi-3",
+          "name": "Raspberry Pi 3",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-raspberry-pi-3-24.10.3-preview-0.5.13.img.gz",
+          "sha256": "0b02144a5677d126cb917d1edfe3d681e98b67347560f6035dd1d56e9465b4e1",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Raspberry_Pi_3_B%2B.jpg",
+          "note": ""
+        },
+        {
+          "board": "raspberry-pi-4",
+          "name": "Raspberry Pi 4",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-raspberry-pi-4-24.10.3-preview-0.5.13.img.gz",
+          "sha256": "f7e5b7f605734e25e042ac98f420515ba278bfa2fa4cd12377d4659141712617",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Raspberry_Pi_4_Model_B_-_Top.jpg",
+          "note": ""
+        },
+        {
+          "board": "raspberry-pi-5",
+          "name": "Raspberry Pi 5",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-raspberry-pi-5-24.10.3-preview-0.5.13.img.gz",
+          "sha256": "b8ce8198666ccd905a738899cae18bb04f39352b53fab06a47e8b3b6677e1353",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Raspberry_Pi_5.jpg",
+          "note": ""
         }
       ],
       "node_assets": [
