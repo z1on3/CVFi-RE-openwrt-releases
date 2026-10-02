@@ -3,6 +3,19 @@
 All notable changes to the CVFi‑RE flashable releases are documented here.
 Entries from before the rename keep the name they were published under.
 
+## preview 0.5.13 — 2026-10-02
+
+**Preview build.** An early look at the next release, published for testing. Flash
+it on a device you can recover, and expect rough edges.
+
+**Telegram sales alerts.** Get a Telegram message when a sale comes in.
+
+**Performance optimizations.** General speed and efficiency improvements.
+
+**Updating from an older release.** Existing devices pick this up on their usual
+update check. If it does not appear there, install it once from the downloads page
+and in-product updates resume as normal afterwards.
+
 ## preview 0.5.1 — 2026-09-26
 
 **Preview build.** An early look at the next release, published for testing. Flash
