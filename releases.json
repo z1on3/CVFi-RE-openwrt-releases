@@ -19,15 +19,6 @@
           "note": "ZBT WG3526 (16M) clone — identical image to the ZBT WG3526; in-product updates track the ZBT WG3526 asset."
         },
         {
-          "board": "comfast-cf-ew71-v2",
-          "name": "Comfast CF-EW71 v2",
-          "openwrt": "25.12.2",
-          "file": "CVFi-RE-comfast-cf-ew71-v2-25.12.2-preview-0.5.13.bin",
-          "sha256": "60a1a576e42d589bc68afe3fc20f9e6a4947a30bc3ca1c93b6d470a15b7c837a",
-          "image": "",
-          "note": ""
-        },
-        {
           "board": "asus-rt-ac68u",
           "name": "ASUS RT-AC68U",
           "openwrt": "24.10.5",
@@ -37,21 +28,30 @@
           "note": "⚠ Wi-Fi unsupported on this Broadcom board in OpenWrt — routes over Ethernet only and cannot serve its own hotspot. Use it wired or paired with an external AP node. First flash from stock ASUS uses the .trx (this image is that .trx under a .bin name)."
         },
         {
-          "board": "comfast-cf-ew72-v2",
-          "name": "Comfast CF-EW72 v2",
-          "openwrt": "25.12.5",
-          "file": "CVFi-RE-comfast-cf-ew72-v2-25.12.5-preview-0.5.13.bin",
-          "sha256": "74993b9c89dcf8a88f94199f5a9dd932e1edf54f563b32f7d6c1d1b50b9df3eb",
-          "image": "https://comfastgroup.com/wp-content/uploads/2024/09/cf-ew72-v2.webp",
-          "note": ""
-        },
-        {
           "board": "asus-rt-ax52",
           "name": "ASUS RT-AX52",
           "openwrt": "25.12.0",
           "file": "CVFi-RE-asus-rt-ax52-25.12.0-preview-0.5.13.bin",
           "sha256": "3dac754d87383f3841ebf3540e5cccbcbd011c00455c5085e79e28d3007f0712",
           "image": "https://image.alza.cz/products/Asus23_022/Asus23_022-01.jpg",
+          "note": ""
+        },
+        {
+          "board": "comfast-cf-ew71-v2",
+          "name": "Comfast CF-EW71 v2",
+          "openwrt": "25.12.2",
+          "file": "CVFi-RE-comfast-cf-ew71-v2-25.12.2-preview-0.5.13.bin",
+          "sha256": "60a1a576e42d589bc68afe3fc20f9e6a4947a30bc3ca1c93b6d470a15b7c837a",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "comfast-cf-ew72-v2",
+          "name": "Comfast CF-EW72 v2",
+          "openwrt": "25.12.5",
+          "file": "CVFi-RE-comfast-cf-ew72-v2-25.12.5-preview-0.5.13.bin",
+          "sha256": "74993b9c89dcf8a88f94199f5a9dd932e1edf54f563b32f7d6c1d1b50b9df3eb",
+          "image": "https://comfastgroup.com/wp-content/uploads/2024/09/cf-ew72-v2.webp",
           "note": ""
         },
         {
@@ -250,6 +250,24 @@
           "file": "CVFi-RE-raspberry-pi-5-24.10.3-preview-0.5.13.img.gz",
           "sha256": "b8ce8198666ccd905a738899cae18bb04f39352b53fab06a47e8b3b6677e1353",
           "image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Raspberry_Pi_5.jpg",
+          "note": ""
+        },
+        {
+          "board": "x86-64",
+          "name": "PC / x86-64 (EFI)",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-x86-64-24.10.3-preview-0.5.13-efi.img.gz",
+          "sha256": "368c13a8781e675b5ebf380f2d1c359191a6726933d1570e05d8603e1417f765",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Intel_NUC_Mini_PC.jpg",
+          "note": ""
+        },
+        {
+          "board": "x86-64",
+          "name": "PC / x86-64 (BIOS)",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-x86-64-24.10.3-preview-0.5.13.img.gz",
+          "sha256": "9de867c2d213732565e7a956254c0d24fc56dd010f13f73065b4c341e3cc383f",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Intel_NUC_Mini_PC.jpg",
           "note": ""
         }
       ],
