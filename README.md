@@ -27,7 +27,9 @@ lineup and do not accompany every release — check the release's own asset list
 
 > **What changed?** See [`CHANGELOG.md`](CHANGELOG.md) and the notes on the
 > release itself. Setting up a coin‑acceptor node? Start with the
-> [Node enrollment guide](NODE-ENROLLMENT.md).
+> [Node enrollment guide](NODE-ENROLLMENT.md), and flash it with the
+> [**CVFi‑RE Node Flasher**](#flashing-the-node--cvfi-re-node-flasher-recommended)
+> (Windows, one click).
 
 Verify downloads against [`SHA256SUMS.txt`](SHA256SUMS.txt):
 
@@ -223,47 +225,92 @@ filesystem (the node's web setup UI is served only from LittleFS).
 - Flash the LittleFS image **before** provisioning; re‑flashing it later wipes the
   saved node‑type/Wi‑Fi/token/pin config.
 
-### Flashing the node (esptool, ESP‑12E / NodeMCU)
+### Flashing the node — CVFi-RE Node Flasher (recommended)
+
+**[⬇ Download `CVFi-RE-Node-Flasher.exe`](../../raw/main/CVFi-RE-Node-Flasher.exe)**
+(Windows 10 / 11, single file, nothing to install).
+
+The flasher downloads both node images from the release you pick and checks them
+against that release's `SHA256SUMS-node.txt`. It then writes **both** in one pass,
+each at its correct address, so there are no offsets to type and nothing to flash
+twice.
+
+![CVFi-RE Node Flasher — annotated steps](docs/img/node-flasher.png)
+
+1. **Version** ➊: the newest **stable** release is selected for you. Leave it, or
+   open the list to pick another release (see below). **Local files** flashes a
+   firmware + LittleFS pair from your PC instead.
+2. **Port** ➋: plug in the NodeMCU; its USB‑serial port (CH340 / CP210x) is
+   selected automatically. If the list is empty, install the CH340 / CP210x driver
+   and click **Refresh**.
+3. **Erase entire flash first** ➌: leave it **ticked** (the default). This clears
+   any Wi‑Fi / pairing a node kept from an earlier setup, so it boots into the
+   Setup wizard.
+4. Click **FLASH NODE** ➍. It verifies the download, writes the firmware and the
+   LittleFS UI, checks both, and reboots the node (about 1 minute).
+
+When it says **Node flashed**, continue with
+[Setting up the node](#setting-up-the-node-after-flashing).
+
+**Choosing a version.** The list shows every release that includes node images,
+newest first, with its node version and whether it is a stable or pre‑release.
+Downloads are cached, so a release you have used once can be flashed again
+offline.
+
+![Version list](docs/img/node-flasher-versions.png)
+
+**If it can't connect:** use a data USB cable (many are charge‑only), close any
+other program using the port (Arduino IDE, serial monitor, PyFlasher), or pick
+**Baud 115200**. As a last resort, hold the board's **FLASH** button, tap **RST**,
+release **FLASH**, and try again.
+
+> Windows may show **"Windows protected your PC"** the first time, because the exe
+> isn't code‑signed. Click **More info → Run anyway**.
+
+### Flashing from the command line (esptool)
 
 These images are built for an **ESP‑12E / 4 MB flash, 1 MB LittleFS** (`eagle.flash.4m1m`)
 layout, so the FS goes at **`0x300000`** (the FS bin is exactly `0xFA000` = 1,024,000 B):
 
 ```sh
-# firmware (first bin) → 0x0
-esptool.py --port <PORT> --baud 460800 write_flash 0x0 CVFi-RE-ESP8266-node-firmware-….bin
-# LittleFS (second bin) → 0x300000  (NOT 0x200000 — that is the 2 MB-FS layout)
-esptool.py --port <PORT> --baud 460800 write_flash 0x300000 CVFi-RE-ESP8266-node-littlefs-….bin
+# re-using a node that was set up before? erase it first
+esptool.py --port <PORT> erase_flash
+# firmware → 0x0 and LittleFS → 0x300000 (NOT 0x200000 — that is the 2 MB-FS layout)
+esptool.py --port <PORT> --baud 460800 write_flash \
+  0x0      CVFi-RE-ESP8266-node-firmware-….bin \
+  0x300000 CVFi-RE-ESP8266-node-littlefs-….bin
 ```
 
-Substitute the exact filenames you downloaded — both bins come from the same
+Substitute the exact filenames you downloaded. Both bins come from the same
 release and carry the same version.
 
 Or let PlatformIO place the FS for you: `pio run -e esp12e -t uploadfs`.
 
-#### GUI alternative — NodeMCU PyFlasher (no command line)
+<details>
+<summary><b>Older method — NodeMCU PyFlasher (two passes)</b></summary>
 
 [**NodeMCU PyFlasher**](https://github.com/marcelstoer/nodemcu-pyflasher/releases)
-(`NodeMCU-PyFlasher.exe`) wraps `esptool`. Use **5.x** — it has the
-**Offset Address** field both bins need. Flash **twice**, firmware first:
+(`NodeMCU-PyFlasher.exe`) also works, but you flash **twice** and must type the
+offset yourself. Use **5.x**, which has the **Offset Address** field. Firmware
+first:
 
 ![NodeMCU PyFlasher — annotated steps](docs/img/pyflasher-node.png)
 
-1. **Serial port** ➊ — the node's COM port (**Reload** if empty; install the
-   CP2102/CH340 USB‑serial driver first if none appears).
-2. **NodeMCU firmware** ➋ — Browse to the **firmware** bin
+1. **Serial port** ➊: the node's COM port (**Reload** if empty).
+2. **NodeMCU firmware** ➋: browse to the **firmware** bin
    (`CVFi-RE-ESP8266-node-firmware-….bin`).
-3. **Offset Address** ➌ — `0x000000` for the firmware.
+3. **Offset Address** ➌: `0x000000` for the firmware.
 4. **Baud rate** ➍ `115200` · **Flash mode** ➎ `Dual I/O (DIO)` ·
-   **Erase flash** ➏ `yes` on a first‑ever flash (else `no`).
+   **Erase flash** ➏ `yes` on the first pass.
 5. Click **Flash NodeMCU** ➐ and wait for success in the console.
 6. **Second pass:** load the **LittleFS** bin
    (`CVFi-RE-ESP8266-node-littlefs-….bin`) in ➋ with
    **Offset Address ➌ = `0x300000`**, set Erase flash to `no`, and Flash again.
 
-> ⚠️ The LittleFS bin **must** go at `0x300000`, not `0x0`. On the first pass the
-> firmware sits at `0x0`; if you leave the offset at `0x0` for the second pass you
-> will overwrite the firmware. Older PyFlasher builds (pre‑5.0) have no offset
-> field — use `esptool` above instead.
+> ⚠️ The LittleFS bin **must** go at `0x300000`, not `0x0`. If you leave the offset
+> at `0x0` for the second pass, you will overwrite the firmware.
+
+</details>
 
 ### Setting up the node after flashing
 

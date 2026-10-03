@@ -18,17 +18,23 @@ There are two consoles involved, don't mix them up:
 ## Prerequisites
 
 - The node is **flashed** with **both** the CVFi‑RE **firmware** *and* **LittleFS**
-  images (see the ESP8266 section in the [README](README.md)). The wizard UI lives in
-  the LittleFS image — firmware alone won't show it.
+  images. The wizard UI lives in the LittleFS image, so firmware alone won't show it.
+  The easiest way is the **CVFi‑RE Node Flasher**
+  ([⬇ `CVFi-RE-Node-Flasher.exe`](../../raw/main/CVFi-RE-Node-Flasher.exe), Windows).
+  It downloads both images, verifies them and writes them in one click:
+
+  ![CVFi-RE Node Flasher](docs/img/node-flasher.png)
+
+  Pick the **Version** ➊ (newest stable is preselected) and the node's **Port** ➋.
+  Leave **Erase entire flash first** ➌ ticked, then click **FLASH NODE** ➍. Full
+  instructions, plus the command‑line method, are in the
+  [README](README.md#flashing-the-node--cvfi-re-node-flasher-recommended).
 - **Re‑using a node that was provisioned before? Erase the chip first.** The node's
   config (Wi‑Fi + pairing token) is backed up in a flash sector that **survives a
   re‑flash**, so a previously‑paired node comes back *paired* and skips the wizard
-  (you'll see the normal Sign‑in page, not Setup). Full‑erase, then flash both images:
-  ```sh
-  esptool.py --port <PORT> erase_flash
-  esptool.py --port <PORT> --baud 460800 write_flash 0x0      CVFi-RE-ESP8266-node-firmware-v0.4.bin
-  esptool.py --port <PORT> --baud 460800 write_flash 0x300000 CVFi-RE-ESP8266-node-littlefs-v0.4.bin
-  ```
+  (you'll see the normal Sign‑in page, not Setup). The Node Flasher's **Erase entire
+  flash first** box (ticked by default) does this for you. With esptool, run
+  `esptool.py --port <PORT> erase_flash` before flashing both images.
 - The router is up and reachable at **`http://10.0.0.1/admin/`** (default login
   `admin` / `admin`).
 
@@ -156,8 +162,8 @@ unpaired.
 
 | Symptom | Fix |
 |---|---|
-| No `CVFi-Node-Setup` AP after flashing | The node kept an old config in its EEPROM backup — **erase the chip** and reflash **both** images (see Prerequisites). |
-| Wizard doesn't show — it goes straight to a **Sign‑in** page | The node is still **paired** (its saved token survived the re‑flash). Do a full **`erase_flash`** first, then reflash both images. |
+| No `CVFi-Node-Setup` AP after flashing | The node kept an old config in its EEPROM backup. Re‑flash with the Node Flasher with **Erase entire flash first** ticked (or `erase_flash`, then both images). |
+| Wizard doesn't show — it goes straight to a **Sign‑in** page | The node is still **paired** (its saved token survived the re‑flash). Re‑flash with **Erase entire flash first** ticked (or a full **`erase_flash`**, then both images). |
 | Setup page blank on first open | Fixed in node **v0.2** (the setup page is now a single self‑contained response). Make sure you flashed the **v0.3** (or newer) LittleFS image. |
 | Node not listed on the router *before* pairing | **Expected.** An unpaired node has no token, so it isn't shown. Click **ENROLL NODE** and it appears only after it activates. |
 | **"code rejected or expired"** on pairing | The code lives 10 min and is single‑use. Click **ENROLL NODE** again for a fresh code, and make sure Step 3 showed the router as reachable. |
