@@ -1,2 +1,2 @@
 cda652a35aa21c92fac75a49f2ccee3ea448a9562f6390a5f2ca5c3cb3322e45  CVFi-RE-ESP8266-node-firmware-v0.5.bin
-8d424351a14e09521db7c6e4cad9984202cf33f9b061203999636b88b8a3eaef  CVFi-RE-ESP8266-node-littlefs-v0.5.bin
+a7721b24efe1f04e15c9db9eafc4620f765489644155cb77fced421cc904f4bb  CVFi-RE-ESP8266-node-littlefs-v0.5.bin

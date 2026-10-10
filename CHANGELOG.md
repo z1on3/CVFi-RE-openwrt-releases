@@ -3,6 +3,27 @@
 All notable changes to the CVFi‑RE flashable releases are documented here.
 Entries from before the rename keep the name they were published under.
 
+## preview 0.5.14 — 2026-10-10
+
+**Preview build.** An early look at the next release, published for testing. Flash
+it on a device you can recover, and expect rough edges.
+
+**Admin password recovery.** Forgot the admin password on a Pro router? Get a
+one-time code from the operator dashboard and set a new password from the sign-in
+page.
+
+**Custom portal wording.** Pro operators can reword the portal's buttons and
+messages.
+
+**Time kept through power outages.** With auto-pause on, customers keep their
+remaining time when the router loses power.
+
+**Bug fixes.** Remote access point VLANs on PC and single-board computer images.
+
+**Updating from an older release.** Existing devices pick this up on their usual
+update check. If it does not appear there, install it once from the downloads page
+and in-product updates resume as normal afterwards.
+
 ## preview 0.5.13 — 2026-10-02
 
 **Preview build.** An early look at the next release, published for testing. Flash
