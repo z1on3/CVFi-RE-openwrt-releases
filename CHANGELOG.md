@@ -3,6 +3,18 @@
 All notable changes to the CVFi‑RE flashable releases are documented here.
 Entries from before the rename keep the name they were published under.
 
+## preview 0.5.15 — 2026-10-11
+
+**Preview build.** An early look at the next release, published for testing. Flash
+it on a device you can recover, and expect rough edges.
+
+**Shared database.** Run several routers on one shared database: customers, their
+remaining time, vouchers and sales follow them from router to router. Each router
+can stay local or join a shared database from the admin page.
+
+**Auto-pause fix.** Auto-pause now tells correctly when a customer has left the
+network, including customers on an extra access point or a cable.
+
 ## preview 0.5.14 — 2026-10-10
 
 **Preview build.** An early look at the next release, published for testing. Flash
