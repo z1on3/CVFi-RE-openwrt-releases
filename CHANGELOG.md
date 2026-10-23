@@ -3,6 +3,29 @@
 All notable changes to the CVFi‑RE flashable releases are documented here.
 Entries from before the rename keep the name they were published under.
 
+## preview 0.5.16 — 2026-10-23
+
+**Preview build.** An early look at the next release, published for testing. Flash
+it on a device you can recover, and expect rough edges.
+
+**New Interface Settings.** ISP Setup, Ports and Bridges now live together under one
+Interface Settings menu.
+
+**Dual ISP.** Add a second internet connection on its own port and choose failover
+(switch over when one line goes down) or load balance (share traffic across both).
+
+**Port roles.** Choose what each port on the router does: first ISP, second ISP,
+hotspot, private LAN or unused, with a cable-connected indicator for each port.
+
+**Private LAN bridges.** Set up private networks with their own addresses and
+internet access, kept separate from the hotspot and without the captive portal.
+
+**Safe network changes.** Port and bridge changes are undone automatically if the
+admin page can no longer reach the router afterwards.
+
+**New router: Ruijie RG-EW1300G v1.** First install is from the bootloader over
+TFTP (serial console); later updates work from the admin page.
+
 ## preview 0.5.15 — 2026-10-11
 
 **Preview build.** An early look at the next release, published for testing. Flash
