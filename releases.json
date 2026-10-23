@@ -10,15 +10,6 @@
       "notes": "CVFi-RE preview 0.5.16",
       "assets": [
         {
-          "board": "asus-rt-ac68u",
-          "name": "ASUS RT-AC68U",
-          "openwrt": "24.10.5",
-          "file": "CVFi-RE-asus-rt-ac68u-24.10.5-preview-0.5.16.bin",
-          "sha256": "bc9fddeb0254803eeea87f9dac09d09e3ccb9e7569ee79f3ced1f76e3c5acc8d",
-          "image": "https://dlcdnwebimgs.asus.com/gain/6670e848-ba84-47e0-97d5-fd076ac3a137/w185",
-          "note": "⚠ Wi-Fi unsupported on this Broadcom board in OpenWrt — routes over Ethernet only and cannot serve its own hotspot. Use it wired or paired with an external AP node. First flash from stock ASUS uses the .trx (this image is that .trx under a .bin name)."
-        },
-        {
           "board": "airpho-ar-w410",
           "name": "AIRPHO AR-W410",
           "openwrt": "24.10.3",
@@ -26,6 +17,15 @@
           "sha256": "c4064a3a2ce21d3e2705dffb739ba5e41b547045d176a280f219f14d731eefc3",
           "image": "",
           "note": "ZBT WG3526 (16M) clone — identical image to the ZBT WG3526; in-product updates track the ZBT WG3526 asset."
+        },
+        {
+          "board": "asus-rt-ac68u",
+          "name": "ASUS RT-AC68U",
+          "openwrt": "24.10.5",
+          "file": "CVFi-RE-asus-rt-ac68u-24.10.5-preview-0.5.16.bin",
+          "sha256": "bc9fddeb0254803eeea87f9dac09d09e3ccb9e7569ee79f3ced1f76e3c5acc8d",
+          "image": "https://dlcdnwebimgs.asus.com/gain/6670e848-ba84-47e0-97d5-fd076ac3a137/w185",
+          "note": "⚠ Wi-Fi unsupported on this Broadcom board in OpenWrt — routes over Ethernet only and cannot serve its own hotspot. Use it wired or paired with an external AP node. First flash from stock ASUS uses the .trx (this image is that .trx under a .bin name)."
         },
         {
           "board": "asus-rt-ax52",
@@ -163,21 +163,21 @@
           "note": ""
         },
         {
-          "board": "ruijie-rg-ew1300g-v1",
-          "name": "ruijie-rg-ew1300g-v1",
-          "openwrt": "25.12.5",
-          "file": "CVFi-RE-ruijie-rg-ew1300g-v1-25.12.5-preview-0.5.16.bin",
-          "sha256": "c88d7dbff5f1d65e61e2f694825aef1f098f3651a490e43e49697e89187a6f6e",
-          "image": "",
-          "note": ""
-        },
-        {
           "board": "ruijie-rg-ew1200g-pro-v1.1",
           "name": "Ruijie RG-EW1200G PRO v1.1",
           "openwrt": "24.10.3",
           "file": "CVFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-preview-0.5.16.bin",
           "sha256": "c013f29c435864d1e4ac0f78dd9b9a7cc3ed01985b21b3adaf7a8ec25de6fde7",
           "image": "https://eo-sgp-cos.ruijie.com/background/other/2023-10-27/7b9d778c2293490a993760bc68f52396.png",
+          "note": ""
+        },
+        {
+          "board": "ruijie-rg-ew1300g-v1",
+          "name": "ruijie-rg-ew1300g-v1",
+          "openwrt": "25.12.5",
+          "file": "CVFi-RE-ruijie-rg-ew1300g-v1-25.12.5-preview-0.5.16.bin",
+          "sha256": "c88d7dbff5f1d65e61e2f694825aef1f098f3651a490e43e49697e89187a6f6e",
+          "image": "",
           "note": ""
         },
         {
@@ -196,6 +196,78 @@
           "file": "CVFi-RE-zbt-wg3526-16m-24.10.3-preview-0.5.16.bin",
           "sha256": "b388d82c1cc15ad843e316f19d98925553315b4e6d1b03821dc1a5c79097e1b5",
           "image": "",
+          "note": ""
+        },
+        {
+          "board": "orange-pi-one",
+          "name": "Orange Pi One",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-orange-pi-one-24.10.3-preview-0.5.16.img.gz",
+          "sha256": "49d60a0ef35bc5cb19e05ea995d76983c3d17a5881641865f71dadb0f6c0cb0a",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Top_view_of_an_Orange_Pi_One_single-board_computer.jpg",
+          "note": ""
+        },
+        {
+          "board": "orange-pi-pc",
+          "name": "Orange Pi PC",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-orange-pi-pc-24.10.3-preview-0.5.16.img.gz",
+          "sha256": "da0ca746940c6517d68001feb490d95f0defd78c40d8b1a7f5f5d38cdcb4c03b",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "orange-pi-zero-3",
+          "name": "Orange Pi Zero 3",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-orange-pi-zero-3-24.10.3-preview-0.5.16.img.gz",
+          "sha256": "eee7f0fc6919adcb7359b869c2133850a4d5f0b86a2f694130c9889098c9e5a8",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "raspberry-pi-3",
+          "name": "Raspberry Pi 3",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-raspberry-pi-3-24.10.3-preview-0.5.16.img.gz",
+          "sha256": "6cd993931929d32ee02c7425d1ff4b7efdafa96a044827876ced4a33f3b3e01d",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Raspberry_Pi_3_B%2B.jpg",
+          "note": ""
+        },
+        {
+          "board": "raspberry-pi-4",
+          "name": "Raspberry Pi 4",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-raspberry-pi-4-24.10.3-preview-0.5.16.img.gz",
+          "sha256": "95ce38c34263eda505a5458cef94db6fec01e34fe0fef8f5997fa968325d728a",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Raspberry_Pi_4_Model_B_-_Top.jpg",
+          "note": ""
+        },
+        {
+          "board": "raspberry-pi-5",
+          "name": "Raspberry Pi 5",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-raspberry-pi-5-24.10.3-preview-0.5.16.img.gz",
+          "sha256": "799422cfe57046f3e34198ec98e00ff3f6f1f5d7967e34367f224f2a410c05ec",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Raspberry_Pi_5.jpg",
+          "note": ""
+        },
+        {
+          "board": "x86-64",
+          "name": "PC / x86-64 (EFI)",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-x86-64-24.10.3-preview-0.5.16-efi.img.gz",
+          "sha256": "ca41bd239547c963f29e6d229476e434d51ba337c4a7e2844f72a8fd9f32c18e",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Intel_NUC_Mini_PC.jpg",
+          "note": ""
+        },
+        {
+          "board": "x86-64",
+          "name": "PC / x86-64 (BIOS)",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-x86-64-24.10.3-preview-0.5.16.img.gz",
+          "sha256": "4e766aee57c80f43a0540a66e224a36002328389e43a33387c77347485e9e5bb",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Intel_NUC_Mini_PC.jpg",
           "note": ""
         }
       ],
