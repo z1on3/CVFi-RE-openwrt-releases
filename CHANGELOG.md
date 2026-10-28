@@ -3,6 +3,26 @@
 All notable changes to the CVFi‑RE flashable releases are documented here.
 Entries from before the rename keep the name they were published under.
 
+## preview 0.5.17 — 2026-10-28
+
+**Preview build.** An early look at the next release, published for testing. Flash
+it on a device you can recover, and expect rough edges.
+
+**Built-in Wi-Fi on VLANs.** Each Wi-Fi network can now join the hotspot LAN or any
+hotspot VLAN, so the router's own Wi-Fi can serve a remote-AP VLAN area too.
+
+**Faster coin crediting on SBC boards.** Coins inserted into a coin slot wired
+straight to the board are credited sooner, and the slot opens faster after tapping
+Insert coin.
+
+**Wi-Fi on after a fresh flash.** Wi-Fi now comes up on its own after a fresh flash
+on OpenWrt 24.10 devices.
+
+**VLAN fixes.** VLAN customers reach the portal reliably, and VLAN changes take
+effect without a reboot.
+
+**Bug fixes and stability improvements.**
+
 ## preview 0.5.16 — 2026-10-23
 
 **Preview build.** An early look at the next release, published for testing. Flash
