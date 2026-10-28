@@ -173,7 +173,7 @@
         },
         {
           "board": "ruijie-rg-ew1300g-v1",
-          "name": "ruijie-rg-ew1300g-v1",
+          "name": "Ruijie RG-EW1300G v1",
           "openwrt": "25.12.5",
           "file": "CVFi-RE-ruijie-rg-ew1300g-v1-25.12.5-preview-0.5.17.bin",
           "sha256": "aab5d4a85854816927c0c17b5a55963b34ecc07db61f55585698aea316fc4589",
@@ -460,7 +460,7 @@
         },
         {
           "board": "ruijie-rg-ew1300g-v1",
-          "name": "ruijie-rg-ew1300g-v1",
+          "name": "Ruijie RG-EW1300G v1",
           "openwrt": "25.12.5",
           "file": "CVFi-RE-ruijie-rg-ew1300g-v1-25.12.5-preview-0.5.16.bin",
           "sha256": "c88d7dbff5f1d65e61e2f694825aef1f098f3651a490e43e49697e89187a6f6e",
@@ -5809,6 +5809,11 @@
     "ruijie-rg-ew1200g-pro-v1.1": {
       "name": "Ruijie RG-EW1200G PRO v1.1",
       "image": "https://eo-sgp-cos.ruijie.com/background/other/2023-10-27/7b9d778c2293490a993760bc68f52396.png",
+      "note": ""
+    },
+    "ruijie-rg-ew1300g-v1": {
+      "name": "Ruijie RG-EW1300G v1",
+      "image": "",
       "note": ""
     },
     "ruijie-rg-ew3200gx-pro": {
