@@ -155,7 +155,7 @@
         },
         {
           "board": "netis-nx31",
-          "name": "netis-nx31",
+          "name": "Netis NX31",
           "openwrt": "25.12.5",
           "file": "CVFi-RE-netis-nx31-25.12.5-preview-0.5.18.bin",
           "sha256": "33836d2d0a61242f61dfd40448c86cd0eee3f222ade292ef91915b4956327493",
@@ -6066,6 +6066,11 @@
     "mercusys-mr70x-v1": {
       "name": "Mercusys MR70X v1",
       "image": "https://static.mercusys.com/product-image/01_large20201223072930.jpg",
+      "note": ""
+    },
+    "netis-nx31": {
+      "name": "Netis NX31",
+      "image": "",
       "note": ""
     },
     "newifi-d2": {
