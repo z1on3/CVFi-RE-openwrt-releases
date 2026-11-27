@@ -5724,35 +5724,6 @@
         }
       ],
       "node_assets": []
-    },
-    {
-      "version": "0.1-beta",
-      "tag": "v0.1-beta",
-      "channel": "beta",
-      "disclaimer": "⚠ Beta — flash at your own risk. We're not responsible for any damage to your device.",
-      "date": "2026-08-14",
-      "notes": "JuanFi Reloaded — Beta 0.1",
-      "assets": [
-        {
-          "board": "comfast-cf-n5-v2",
-          "name": "Comfast CF-N5 v2",
-          "openwrt": "24.10.3",
-          "file": "JuanFi-RE-comfast-cf-n5-v2-24.10.3-beta-0.1.bin",
-          "sha256": "ad7f5bbcd09bd42731a8ec10e53e4c5ef53f7a0d96ced556d3f9ed2f73342923",
-          "image": "https://comfastgroup.com/wp-content/uploads/2024/09/cf-n5-v2.webp",
-          "note": ""
-        },
-        {
-          "board": "ruijie-rg-ew1200g-pro-v1.1",
-          "name": "Ruijie RG-EW1200G PRO v1.1",
-          "openwrt": "24.10.3",
-          "file": "JuanFi-RE-ruijie-rg-ew1200g-pro-v1.1-24.10.3-beta-0.1.bin",
-          "sha256": "c272bc6bf1c40889ce78d0d1e508a02c9166ff6abb50015a99ea0fb4003e9f2b",
-          "image": "https://eo-sgp-cos.ruijie.com/background/other/2023-10-27/7b9d778c2293490a993760bc68f52396.png",
-          "note": ""
-        }
-      ],
-      "node_assets": []
     }
   ],
   "devices": {
