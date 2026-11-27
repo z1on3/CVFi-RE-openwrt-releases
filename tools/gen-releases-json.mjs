@@ -90,6 +90,7 @@ const DEVICES = {
   'linksys-ea8300':             { name: 'Linksys EA8300',             image: '' },
   'linksys-wrt1900acs':         { name: 'Linksys WRT1900ACS',         image: '' },
   'mercusys-mr70x-v1':          { name: 'Mercusys MR70X v1',          image: 'https://static.mercusys.com/product-image/01_large20201223072930.jpg' },
+  'netis-nx31':                 { name: 'Netis NX31',                 image: '' },
   'newifi-d2':                  { name: 'Newifi D2',                  image: '' },
   'ruijie-rg-ew1200g-pro-v1.1': { name: 'Ruijie RG-EW1200G PRO v1.1', image: 'https://eo-sgp-cos.ruijie.com/background/other/2023-10-27/7b9d778c2293490a993760bc68f52396.png' },
   'ruijie-rg-ew1300g-v1':       { name: 'Ruijie RG-EW1300G v1',       image: '' },
