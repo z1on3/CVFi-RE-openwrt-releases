@@ -10,15 +10,6 @@
       "notes": "CVFi-RE preview 0.5.18",
       "assets": [
         {
-          "board": "comfast-cf-ew71-v2",
-          "name": "Comfast CF-EW71 v2",
-          "openwrt": "25.12.2",
-          "file": "CVFi-RE-comfast-cf-ew71-v2-25.12.2-preview-0.5.18.bin",
-          "sha256": "4f60074750908c5ceba0236fcc088f6e292c473c0097f1eaed1df73a6ea18dc9",
-          "image": "",
-          "note": ""
-        },
-        {
           "board": "airpho-ar-w410",
           "name": "AIRPHO AR-W410",
           "openwrt": "24.10.3",
@@ -28,13 +19,13 @@
           "note": "ZBT WG3526 (16M) clone — identical image to the ZBT WG3526; in-product updates track the ZBT WG3526 asset."
         },
         {
-          "board": "comfast-cf-ew72-v2",
-          "name": "Comfast CF-EW72 v2",
-          "openwrt": "25.12.5",
-          "file": "CVFi-RE-comfast-cf-ew72-v2-25.12.5-preview-0.5.18.bin",
-          "sha256": "a85b3961380047fd5741d6c26074742e5a2564f1f1bde240a3cec9658c1c5b83",
-          "image": "https://comfastgroup.com/wp-content/uploads/2024/09/cf-ew72-v2.webp",
-          "note": ""
+          "board": "asus-rt-ac68u",
+          "name": "ASUS RT-AC68U",
+          "openwrt": "24.10.5",
+          "file": "CVFi-RE-asus-rt-ac68u-24.10.5-preview-0.5.18.bin",
+          "sha256": "3f2f0349b99a28071490bda4df8ecd2e65f23a3fb96a5d00974d34c758456f5a",
+          "image": "https://dlcdnwebimgs.asus.com/gain/6670e848-ba84-47e0-97d5-fd076ac3a137/w185",
+          "note": "⚠ Wi-Fi unsupported on this Broadcom board in OpenWrt — routes over Ethernet only and cannot serve its own hotspot. Use it wired or paired with an external AP node. First flash from stock ASUS uses the .trx (this image is that .trx under a .bin name)."
         },
         {
           "board": "asus-rt-ax52",
@@ -46,13 +37,22 @@
           "note": ""
         },
         {
-          "board": "asus-rt-ac68u",
-          "name": "ASUS RT-AC68U",
-          "openwrt": "24.10.5",
-          "file": "CVFi-RE-asus-rt-ac68u-24.10.5-preview-0.5.18.bin",
-          "sha256": "3f2f0349b99a28071490bda4df8ecd2e65f23a3fb96a5d00974d34c758456f5a",
-          "image": "https://dlcdnwebimgs.asus.com/gain/6670e848-ba84-47e0-97d5-fd076ac3a137/w185",
-          "note": "⚠ Wi-Fi unsupported on this Broadcom board in OpenWrt — routes over Ethernet only and cannot serve its own hotspot. Use it wired or paired with an external AP node. First flash from stock ASUS uses the .trx (this image is that .trx under a .bin name)."
+          "board": "comfast-cf-ew71-v2",
+          "name": "Comfast CF-EW71 v2",
+          "openwrt": "25.12.2",
+          "file": "CVFi-RE-comfast-cf-ew71-v2-25.12.2-preview-0.5.18.bin",
+          "sha256": "4f60074750908c5ceba0236fcc088f6e292c473c0097f1eaed1df73a6ea18dc9",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "comfast-cf-ew72-v2",
+          "name": "Comfast CF-EW72 v2",
+          "openwrt": "25.12.5",
+          "file": "CVFi-RE-comfast-cf-ew72-v2-25.12.5-preview-0.5.18.bin",
+          "sha256": "a85b3961380047fd5741d6c26074742e5a2564f1f1bde240a3cec9658c1c5b83",
+          "image": "https://comfastgroup.com/wp-content/uploads/2024/09/cf-ew72-v2.webp",
+          "note": ""
         },
         {
           "board": "comfast-cf-n5-v2",
@@ -73,20 +73,20 @@
           "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
         },
         {
-          "board": "eap225-v1",
-          "name": "TP-Link EAP225 v1",
-          "openwrt": "24.10.3",
-          "file": "CVFi-RE-eap225-v1-24.10.3-preview-0.5.18.bin",
-          "sha256": "f5f29ba38191b9a55ec040e923a1b49375f5640191e97580627152f62fde4346",
-          "image": "",
-          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
-        },
-        {
           "board": "eap225-outdoor-v3",
           "name": "TP-Link EAP225-Outdoor v3",
           "openwrt": "24.10.3",
           "file": "CVFi-RE-eap225-outdoor-v3-24.10.3-preview-0.5.18.bin",
           "sha256": "21f7d31eae07d7c700cd94adca9d829f1dcf9b64c9f5598211a404fa552f55a3",
+          "image": "",
+          "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
+        },
+        {
+          "board": "eap225-v1",
+          "name": "TP-Link EAP225 v1",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-eap225-v1-24.10.3-preview-0.5.18.bin",
+          "sha256": "f5f29ba38191b9a55ec040e923a1b49375f5640191e97580627152f62fde4346",
           "image": "",
           "note": "⚠ Experimental — single-port AP-as-gateway image, not yet boot-tested on hardware. Flash only on a device you can recover, and verify one revision (internet + portal + a client session) first."
         },
@@ -205,6 +205,78 @@
           "file": "CVFi-RE-zbt-wg3526-16m-24.10.3-preview-0.5.18.bin",
           "sha256": "d02eba0bdf5ae1b17e186cfe8c70a0b2090a6fc92fe9c7305d9996e692372ef2",
           "image": "",
+          "note": ""
+        },
+        {
+          "board": "orange-pi-one",
+          "name": "Orange Pi One",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-orange-pi-one-24.10.3-preview-0.5.18.img.gz",
+          "sha256": "546d2d961304ecfff00e8a623b876e91306cde2b17b433a53d0a7670735e38de",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Top_view_of_an_Orange_Pi_One_single-board_computer.jpg",
+          "note": ""
+        },
+        {
+          "board": "orange-pi-pc",
+          "name": "Orange Pi PC",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-orange-pi-pc-24.10.3-preview-0.5.18.img.gz",
+          "sha256": "4314ff7c1ea332527d435d77e8ec68cf3bc3e6937a9957cfb7e4f86d309a4a67",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "orange-pi-zero-3",
+          "name": "Orange Pi Zero 3",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-orange-pi-zero-3-24.10.3-preview-0.5.18.img.gz",
+          "sha256": "2f71a5561d3c163758dea058dd0d0171e20b1c984fccdb464715f945ae907d20",
+          "image": "",
+          "note": ""
+        },
+        {
+          "board": "raspberry-pi-3",
+          "name": "Raspberry Pi 3",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-raspberry-pi-3-24.10.3-preview-0.5.18.img.gz",
+          "sha256": "8edd6ee9ecdd0900187c6b4e339138e802f43e4de0a2da63617add17dd9bfa4e",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/7/74/Raspberry_Pi_3_B%2B.jpg",
+          "note": ""
+        },
+        {
+          "board": "raspberry-pi-4",
+          "name": "Raspberry Pi 4",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-raspberry-pi-4-24.10.3-preview-0.5.18.img.gz",
+          "sha256": "24ff829195b12db48d271ad501418f1389a2176694daed436760cdd2b398297b",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Raspberry_Pi_4_Model_B_-_Top.jpg",
+          "note": ""
+        },
+        {
+          "board": "raspberry-pi-5",
+          "name": "Raspberry Pi 5",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-raspberry-pi-5-24.10.3-preview-0.5.18.img.gz",
+          "sha256": "388fdb8933ee7de9b85d62d0b343de6ea32fee4539ea9a1dd68000085a625570",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Raspberry_Pi_5.jpg",
+          "note": ""
+        },
+        {
+          "board": "x86-64",
+          "name": "PC / x86-64 (EFI)",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-x86-64-24.10.3-preview-0.5.18-efi.img.gz",
+          "sha256": "c799ba41dee26eef78ab2ab5284965b437b324ab416726b801253ed8a05ee46d",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Intel_NUC_Mini_PC.jpg",
+          "note": ""
+        },
+        {
+          "board": "x86-64",
+          "name": "PC / x86-64 (BIOS)",
+          "openwrt": "24.10.3",
+          "file": "CVFi-RE-x86-64-24.10.3-preview-0.5.18.img.gz",
+          "sha256": "b2da4b266361af264888bbc3c6c97ca6ea99f9f407b7348e182a2819304dd0b9",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/26/Intel_NUC_Mini_PC.jpg",
           "note": ""
         }
       ],
