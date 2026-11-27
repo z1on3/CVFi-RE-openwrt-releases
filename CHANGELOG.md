@@ -3,6 +3,16 @@
 All notable changes to the CVFi‑RE flashable releases are documented here.
 Entries from before the rename keep the name they were published under.
 
+## preview 0.5.18 — 2026-11-27
+
+**Preview build.** An early look at the next release, published for testing. Flash
+it on a device you can recover, and expect rough edges.
+
+**New supported device: Netis NX31.** The Netis NX31 (Wi‑Fi 6) can now be flashed
+and receives in‑product updates.
+
+**Bug fixes and stability improvements.**
+
 ## preview 0.5.17 — 2026-10-28
 
 **Preview build.** An early look at the next release, published for testing. Flash

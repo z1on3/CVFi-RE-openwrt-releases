@@ -1,8 +1,8 @@
-415ffc988a3c0710ad5183b7bf8ec3eb972bd9076971044f3128926366e9deff  CVFi-RE-orange-pi-one-24.10.3-preview-0.5.17.img.gz
-ed1a3cc3b0b3666e7fdccf6a2146612ca2937ffdd9a61fd4429e122218b59b0c  CVFi-RE-orange-pi-pc-24.10.3-preview-0.5.17.img.gz
-42494244ed7addb047946d4a9ed50af2fa6209df18464052b5f445bbb4f824dc  CVFi-RE-orange-pi-zero-3-24.10.3-preview-0.5.17.img.gz
-4e0525742842af2cef43a831d69ffd6fb3a7f8bbe58e2b7e883dcb22409e3004  CVFi-RE-raspberry-pi-3-24.10.3-preview-0.5.17.img.gz
-44e31a6aebe516289379b7e509e7943517e343b320212fdfa33bff6b8d64a377  CVFi-RE-raspberry-pi-4-24.10.3-preview-0.5.17.img.gz
-0ec1db7957e51e1c6b843854e7a634f9b6dd7c1e783a53f745f6d06827f20915  CVFi-RE-raspberry-pi-5-24.10.3-preview-0.5.17.img.gz
-1f548f6ab7772266c1a2702c46bfeebb144dfea0d435d8de48586bff0e0b89f0  CVFi-RE-x86-64-24.10.3-preview-0.5.17-efi.img.gz
-08256fea149473bcecf9e05618fc900ec2367c787c18c65803f0a37e3b35b99b  CVFi-RE-x86-64-24.10.3-preview-0.5.17.img.gz
+546d2d961304ecfff00e8a623b876e91306cde2b17b433a53d0a7670735e38de  CVFi-RE-orange-pi-one-24.10.3-preview-0.5.18.img.gz
+4314ff7c1ea332527d435d77e8ec68cf3bc3e6937a9957cfb7e4f86d309a4a67  CVFi-RE-orange-pi-pc-24.10.3-preview-0.5.18.img.gz
+2f71a5561d3c163758dea058dd0d0171e20b1c984fccdb464715f945ae907d20  CVFi-RE-orange-pi-zero-3-24.10.3-preview-0.5.18.img.gz
+8edd6ee9ecdd0900187c6b4e339138e802f43e4de0a2da63617add17dd9bfa4e  CVFi-RE-raspberry-pi-3-24.10.3-preview-0.5.18.img.gz
+24ff829195b12db48d271ad501418f1389a2176694daed436760cdd2b398297b  CVFi-RE-raspberry-pi-4-24.10.3-preview-0.5.18.img.gz
+388fdb8933ee7de9b85d62d0b343de6ea32fee4539ea9a1dd68000085a625570  CVFi-RE-raspberry-pi-5-24.10.3-preview-0.5.18.img.gz
+b2da4b266361af264888bbc3c6c97ca6ea99f9f407b7348e182a2819304dd0b9  CVFi-RE-x86-64-24.10.3-preview-0.5.18.img.gz
+c799ba41dee26eef78ab2ab5284965b437b324ab416726b801253ed8a05ee46d  CVFi-RE-x86-64-24.10.3-preview-0.5.18-efi.img.gz
